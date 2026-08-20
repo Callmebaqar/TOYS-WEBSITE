@@ -1,4 +1,4 @@
-/* ToyVerse - Main Application JavaScript */
+﻿/* ToyVerse - Main Application JavaScript */
 var IMG = 'https://images.unsplash.com/photo-';
 
 var PRODUCTS = [
@@ -945,11 +945,11 @@ var PRODUCTS = [
     material: "ABS Plastic & Fabric",
     brand: "HeroForce PK",
     country: "Pakistan",
-    description: "Pakistani superhero action figure with 15 points of articulation, removable cape, and拳头 action feature. A homegrown hero for local kids!",
+    description: "Pakistani superhero action figure with 15 points of articulation, removable cape, andæ‹³å¤´ action feature. A homegrown hero for local kids!",
     features: [
       "15 points of articulation",
       "Removable fabric cape",
-      "拳頭 punching action",
+      "æ‹³é ­ punching action",
       "8 inches tall",
       "Collectible packaging"
     ],
@@ -1322,6 +1322,244 @@ var PRODUCTS = [
       { name: "Raoof A.", avatar: "R", date: "2025-11-22", stars: 5, text: "My son takes this kit on every outdoor trip! The compass and binoculars are real working tools." },
       { name: "Junaid K.", avatar: "J", date: "2025-12-18", stars: 5, text: "Fantastic gift for adventurous kids. The quality of each item is impressive." }
     ]
+  },
+  // ---- BOYS: Outdoor (continued) ----
+  {id:41,name:"Water Blaster Mega Pack",image:IMG+"1519019121996-5a48f6d78e8b?w=400&h=400&fit=crop",category:"boys",subcategory:"outdoor",price:1299,oldPrice:1799,rating:4.6,reviewCount:201,bestseller:true,isNew:true,onSale:true,inStock:true,quality:"Standard",age:"5-14 years",material:"ABS Plastic",brand:"AquaBlast",country:"China",description:"Set of 4 powerful water blasters in different sizes. Perfect for summer fun and pool parties!",features:["4 water blasters","Up to 10m range","Quick-fill design","BPA-free plastic"],safetyInfo:"CE certified. BPA-free, non-toxic. Ages 5+.",reviews:[{name:"Omar S.",avatar:"O",date:"Mar 2026",stars:5,text:"Best summer purchase!"},{name:"Sana K.",avatar:"S",date:"Feb 2026",stars:5,text:"Strong water stream, well-made."}]},
+  {id:42,name:"Outdoor Sports Combo Set",image:IMG+"1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop",category:"boys",subcategory:"outdoor",price:1999,oldPrice:2799,rating:4.4,reviewCount:87,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"4-12 years",material:"Mixed Materials",brand:"ActiveKids",country:"Pakistan",description:"Multi-sport set with cricket bat, football, basketball, badminton rackets and more!",features:["Cricket bat and ball","Size 3 football","Mini basketball","2 badminton rackets"],safetyInfo:"Non-toxic materials. Rounded edges. Ages 4+.",reviews:[{name:"Kamran A.",avatar:"K",date:"Jan 2026",stars:4,text:"Great variety of sports equipment."},{name:"Farah N.",avatar:"F",date:"Feb 2026",stars:5,text:"My kids love every sport now!"}]},
+  // ---- PREMIUM ----
+  {id:43,name:"Premium Doll House Mansion",image:IMG+"1545558014-8692077e9b5c?w=400&h=400&fit=crop",category:"premium",subcategory:"dollhouses",price:12999,oldPrice:16999,rating:4.9,reviewCount:34,bestseller:true,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"5-14 years",material:"Solid Wood & Fabric",brand:"ToyVerse Premium",country:"Germany",description:"Ultimate luxury dollhouse with 5 rooms, working lights, elevator, and 30 furniture pieces.",features:["5 furnished rooms","Working LED lights","Passenger elevator","30 furniture pieces"],safetyInfo:"EN71 and TUV certified. Water-based paints. Ages 5+.",reviews:[{name:"Asma Q.",avatar:"A",date:"Feb 2026",stars:5,text:"Absolutely premium quality!"},{name:"Tariq B.",avatar:"T",date:"Mar 2026",stars:5,text:"Stunning gift, worth every rupee."}]},
+  {id:44,name:"Deluxe RC Helicopter Pro",image:IMG+"1615497001839-b0a0eac3274c?w=400&h=400&fit=crop",category:"premium",subcategory:"rc",price:8999,oldPrice:11999,rating:4.7,reviewCount:45,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Premium",age:"10-Adult",material:"Carbon Fiber & Metal",brand:"SkyMaster",country:"Japan",description:"Professional-grade RC helicopter with gyro stabilization and 45-minute flight time.",features:["Gyro stabilization","45-min flight time","LED navigation lights","3D flight capability"],safetyInfo:"FCC certified. Auto-land on low battery. Ages 10+.",reviews:[{name:"Hassan T.",avatar:"H",date:"Jan 2026",stars:5,text:"Incredible stability and flight time."},{name:"Faisal K.",avatar:"F",date:"Mar 2026",stars:5,text:"Professional quality RC helicopter."}]},
+  {id:45,name:"Premium Engineering Building Set",image:IMG+"1602631985686-1bb0e6a8696e?w=400&h=400&fit=crop",category:"premium",subcategory:"building",price:7499,oldPrice:9999,rating:4.8,reviewCount:56,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"8-16 years",material:"ABS Plastic & Metal",brand:"TechBuild",country:"Germany",description:"Complex engineering set with motorized parts to build cranes, bridges and vehicles.",features:["800+ pieces","Motorized crane","Gear and pulley system","Detailed manual"],safetyInfo:"CE and TUV certified. No sharp edges. Ages 8+.",reviews:[{name:"Talha S.",avatar:"T",date:"Nov 2025",stars:5,text:"Fantastic educational toy!"},{name:"Shameem R.",avatar:"S",date:"Jan 2026",stars:5,text:"Premium quality, motorized parts work great."}]},
+  {id:46,name:"Luxury Gift Set for Girls",image:IMG+"1563911892437-1feda0179e1b?w=400&h=400&fit=crop",category:"premium",subcategory:"giftsets",price:9999,oldPrice:13999,rating:4.9,reviewCount:28,bestseller:true,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"3-10 years",material:"Mixed Premium Materials",brand:"ToyVerse Premium",country:"Pakistan",description:"Curated gift box with plush unicorn, princess doll, art set, puzzle, and greeting card.",features:["5 premium gifts","Personalized greeting card","Luxury gift wrapping","Premium quality items"],safetyInfo:"All items safety tested. Ages 3+.",reviews:[{name:"Saira M.",avatar:"S",date:"Feb 2026",stars:5,text:"Most beautiful gift set ever!"},{name:"Danish K.",avatar:"D",date:"Mar 2026",stars:5,text:"Premium packaging, amazing quality."}]},
+  {id:47,name:"Premium STEM Laboratory Kit",image:IMG+"1532094349884-543bc11b234d?w=400&h=400&fit=crop",category:"premium",subcategory:"stem",price:7499,oldPrice:9999,rating:4.8,reviewCount:67,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"8-16 years",material:"Lab-grade Materials",brand:"ScienceElite",country:"USA",description:"Comprehensive STEM lab with real equipment, 100+ experiments, and digital guidebook.",features:["Real glass beakers","100+ experiments","Microscope included","Lab coat and goggles"],safetyInfo:"All chemicals non-toxic. Ages 8+.",reviews:[{name:"Shahid R.",avatar:"S",date:"Feb 2026",stars:5,text:"Phenomenal STEM kit!"},{name:"Nadia M.",avatar:"N",date:"Mar 2026",stars:5,text:"Lab-quality equipment, truly premium."}]},
+  {id:48,name:"Premium Plush Bear Collection",image:IMG+"1559715541-d5bdb2cff4be?w=400&h=400&fit=crop",category:"premium",subcategory:"soft",price:6999,oldPrice:8999,rating:4.9,reviewCount:22,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"All ages",material:"Imported Ultra-Soft Plush",brand:"CuddleBuddy Premium",country:"South Korea",description:"3 premium plush bears in different sizes, each in a luxury gift bag.",features:["3 bears S/M/L","Imported ultra-soft plush","Gift bag packaging","Machine washable"],safetyInfo:"OEKO-TEX certified. Safety eyes. Suitable from birth.",reviews:[{name:"Rukhsana A.",avatar:"R",date:"Jan 2026",stars:5,text:"Softest plush toys ever!"},{name:"Imran S.",avatar:"I",date:"Feb 2026",stars:5,text:"Perfect luxury gift."}]},
+  // ---- IMPORTED ----
+  {id:49,name:"Imported LEGO City Fire Station",image:IMG+"1587654780291-39c9404d7dd0?w=400&h=400&fit=crop",category:"imported",subcategory:"building",price:14999,oldPrice:18999,rating:4.9,reviewCount:156,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Imported",age:"6-12 years",material:"ABS Plastic",brand:"LEGO",country:"Denmark",description:"Authentic LEGO City Fire Station with fire truck, minifigures, and detailed station.",features:["678 LEGO pieces","Fire truck with ladder","4 minifigures","Detailed station"],safetyInfo:"Original LEGO. EN71 certified. Ages 6+.",reviews:[{name:"Bilal K.",avatar:"B",date:"Dec 2025",stars:5,text:"Original LEGO quality!"},{name:"Amina R.",avatar:"A",date:"Jan 2026",stars:5,text:"Amazing detail, genuine product."}]},
+  {id:50,name:"Imported Barbie Dreamhouse",image:IMG+"1596461404969-9ae70f2830c1?w=400&h=400&fit=crop",category:"imported",subcategory:"dolls",price:19999,oldPrice:24999,rating:4.8,reviewCount:89,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Imported",age:"3-10 years",material:"Premium Plastic",brand:"Barbie",country:"USA",description:"The iconic Barbie Dreamhouse with 3 stories, working elevator, pool, and 20+ accessories.",features:["3 stories, 7 rooms","Working elevator","Swimming pool","Light and sound"],safetyInfo:"Original Mattel. ASTM F963 certified. Ages 3+.",reviews:[{name:"Sana T.",avatar:"S",date:"Nov 2025",stars:5,text:"The real Barbie Dreamhouse!"},{name:"Omar H.",avatar:"O",date:"Jan 2026",stars:5,text:"Authentic product, amazing quality."}]},
+  {id:51,name:"Imported Hot Wheels Ultimate Garage",image:IMG+"1558618666-fcd25c85f82e?w=400&h=400&fit=crop",category:"imported",subcategory:"rc",price:11999,oldPrice:14999,rating:4.7,reviewCount:112,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Imported",age:"5-12 years",material:"Die-cast Metal & Plastic",brand:"Hot Wheels",country:"USA",description:"Multi-level car garage with motorized elevator, crash zone, room for 60+ cars.",features:["3-level garage","Motorized elevator","Crash zone","Holds 60+ cars"],safetyInfo:"Original Mattel. Non-toxic. Ages 5+.",reviews:[{name:"Hamza A.",avatar:"H",date:"Feb 2026",stars:5,text:"My son is obsessed!"},{name:"Irfan M.",avatar:"I",date:"Mar 2026",stars:4,text:"Great garage, wish it had more cars."}]},
+  {id:52,name:"Imported VTech Learning Tablet",image:IMG+"1576020799627-aeac74d58064?w=400&h=400&fit=crop",category:"imported",subcategory:"stem",price:6999,oldPrice:8999,rating:4.6,reviewCount:78,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Imported",age:"3-8 years",material:"Durable Plastic",brand:"VTech",country:"China",description:"Interactive learning tablet with 100+ educational games covering reading, math, and science.",features:["100+ learning activities","Touchscreen","Parental controls","Rechargeable battery"],safetyInfo:"FCC and CE certified. Drop-proof. Ages 3+.",reviews:[{name:"Nida K.",avatar:"N",date:"Jan 2026",stars:5,text:"My 4-year-old is learning to read!"},{name:"Ali R.",avatar:"A",date:"Feb 2026",stars:4,text:"Good educational tablet."}]},
+  {id:53,name:"Imported Ravensburger 3D Puzzle",image:IMG+"1609198092454-16774c621e85?w=400&h=400&fit=crop",category:"imported",subcategory:"puzzles",price:5999,oldPrice:7499,rating:4.8,reviewCount:67,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Imported",age:"10-Adult",material:"Premium Plastic",brand:"Ravensburger",country:"Germany",description:"3D Eiffel Tower puzzle. 216 precision-fit pieces, 44cm tall. No glue needed.",features:["216 pieces","No glue required","LED light base","44cm tall"],safetyInfo:"Original Ravensburger. CE certified. Ages 10+.",reviews:[{name:"Waqas K.",avatar:"W",date:"Dec 2025",stars:5,text:"Amazing puzzle with LED base!"},{name:"Sobia A.",avatar:"S",date:"Feb 2026",stars:5,text:"Precision quality, perfect fit."}]},
+  {id:54,name:"Imported Jellycat Plush Bunny",image:IMG+"1583511655826-05700442b31b?w=400&h=400&fit=crop",category:"imported",subcategory:"soft",price:5499,oldPrice:6999,rating:4.9,reviewCount:134,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Imported",age:"All ages",material:"Premium Plush",brand:"Jellycat",country:"UK",description:"Iconic Jellycat Bashful Bunny. Incredibly soft, cuddly, and loved worldwide.",features:["Iconic design","Super soft plush","Weighted bottom","32cm tall","Gift box included"],safetyInfo:"Original Jellycat. EN71 certified. Suitable from birth.",reviews:[{name:"Hira M.",avatar:"H",date:"Jan 2026",stars:5,text:"Softest bunny in the world!"},{name:"Tariq S.",avatar:"T",date:"Mar 2026",stars:5,text:"Authentic Jellycat quality."}]},
+  {id:55,name:"Imported Crayola Art Case 140pc",image:IMG+"1595841696677-6489ff3f8cd1?w=400&h=400&fit=crop",category:"imported",subcategory:"arts",price:4999,oldPrice:6499,rating:4.7,reviewCount:98,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Imported",age:"4-14 years",material:"Non-toxic Pigments",brand:"Crayola",country:"USA",description:"Complete art case with 140 pieces: crayons, pencils, markers, watercolors in carrying case.",features:["140 art supplies","Crayons, pencils, markers","Watercolor set","Carrying case"],safetyInfo:"Original Crayola. AP certified non-toxic. Ages 4+.",reviews:[{name:"Mariam Z.",avatar:"M",date:"Feb 2026",stars:5,text:"Original Crayola quality!"},{name:"Kamran L.",avatar:"K",date:"Mar 2026",stars:4,text:"Great art set."}]},
+  {id:56,name:"Imported National Geographic Rock Kit",image:IMG+"1532094349884-543bc11b234d?w=400&h=400&fit=crop",category:"imported",subcategory:"educational",price:4499,oldPrice:5999,rating:4.6,reviewCount:56,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Imported",age:"8-16 years",material:"Real Minerals & Tools",brand:"National Geographic",country:"USA",description:"15 real rock specimens with learning guide, magnifying glass, and display case.",features:["15 real specimens","Learning guide","Magnifying glass","Display case"],safetyInfo:"Original NatGeo. Non-toxic. Ages 8+.",reviews:[{name:"Faizan R.",avatar:"F",date:"Jan 2026",stars:5,text:"Real specimens are amazing!"},{name:"Parveen S.",avatar:"P",date:"Feb 2026",stars:5,text:"High quality educational kit."}]},
+  // ---- EDUCATIONAL ----
+  {id:57,name:"Montessori Wooden Puzzle Set",image:IMG+"1566576912321-d58ddd7a6088?w=400&h=400&fit=crop",category:"educational",subcategory:"montessori",price:2499,oldPrice:3299,rating:4.7,reviewCount:167,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"2-6 years",material:"Natural Wood",brand:"MontessoriPlay",country:"Pakistan",description:"6 wooden Montessori puzzles covering shapes, colors, numbers, animals, letters, and patterns.",features:["6 wooden puzzles","Natural wood finish","Non-toxic paint","Storage tray"],safetyInfo:"EN71 certified. Lead-free paint. Ages 2+.",reviews:[{name:"Sana K.",avatar:"S",date:"Jan 2026",stars:5,text:"Perfect Montessori puzzles!"},{name:"Ahmed H.",avatar:"A",date:"Feb 2026",stars:4,text:"Good quality wooden puzzles."}]},
+  {id:58,name:"STEM Coding for Kids Kit",image:IMG+"1576020799627-aeac74d58064?w=400&h=400&fit=crop",category:"educational",subcategory:"coding",price:3999,oldPrice:5499,rating:4.8,reviewCount:89,bestseller:true,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"7-14 years",material:"ABS Plastic & Electronics",brand:"CodeBuddy",country:"South Korea",description:"Build and program your own robot with drag-and-drop and real Python coding.",features:["150+ coding challenges","Bluetooth control","LED display","Voice commands"],safetyInfo:"FCC and CE certified. Ages 7+.",reviews:[{name:"Tariq S.",avatar:"T",date:"Mar 2026",stars:5,text:"Learned coding in a week!"},{name:"Rukhsana A.",avatar:"R",date:"Feb 2026",stars:5,text:"Plays and learns at the same time."}]},
+  {id:59,name:"Solar System Model Kit",image:IMG+"1615497001839-b0a0eac3274c?w=400&h=400&fit=crop",category:"educational",subcategory:"science",price:2999,oldPrice:3999,rating:4.5,reviewCount:78,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"6-14 years",material:"Plastic & Electronics",brand:"SpaceKit",country:"China",description:"Motorized solar system model with LED sun, orbiting planets, and fact booklet.",features:["Motorized orbits","LED sun","9 planets","Fact booklet"],safetyInfo:"CE certified. Battery operated. Ages 6+.",reviews:[{name:"Imran B.",avatar:"I",date:"Feb 2026",stars:5,text:"Memorized all planet names!"},{name:"Nazia K.",avatar:"N",date:"Jan 2026",stars:4,text:"Great educational kit."}]},
+  {id:60,name:"Microscope Explorer Kit",image:IMG+"1581952976147-4a07e162a5c7?w=400&h=400&fit=crop",category:"educational",subcategory:"science",price:3499,oldPrice:4499,rating:4.6,reviewCount:56,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Standard",age:"8-16 years",material:"Metal & Glass Optics",brand:"LabKids",country:"China",description:"Real microscope with 100x-1200x magnification, prepared slides, and specimen tools.",features:["100x-1200x magnification","25 prepared slides","LED illumination","Carrying case"],safetyInfo:"Glass optics, adult supervision. Ages 8+.",reviews:[{name:"Shahid K.",avatar:"S",date:"Jan 2026",stars:5,text:"A real microscope, not a toy!"},{name:"Bushra H.",avatar:"B",date:"Mar 2026",stars:4,text:"Good quality optics."}]},
+  {id:61,name:"Magnetic Building Tiles 120pc",image:IMG+"1566576912321-d58ddd7a6088?w=400&h=400&fit=crop",category:"educational",subcategory:"building",price:4499,oldPrice:5999,rating:4.8,reviewCount:234,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Premium",age:"3-14 years",material:"ABS Plastic & Magnets",brand:"MagBuild",country:"China",description:"120 colorful magnetic tiles for building castles, rockets, houses and more.",features:["120 magnetic tiles","Multiple shapes","Strong magnets","Storage bag"],safetyInfo:"CE and ASTM certified. Magnets enclosed. Ages 3+.",reviews:[{name:"Kamran L.",avatar:"K",date:"Dec 2025",stars:5,text:"Family plays together!"},{name:"Shazia N.",avatar:"S",date:"Jan 2026",stars:5,text:"Best educational toy."}]},
+  {id:62,name:"Math Learning Game Board",image:IMG+"1611371805429-8b8c6d397585?w=400&h=400&fit=crop",category:"educational",subcategory:"learning",price:1499,oldPrice:1999,rating:4.4,reviewCount:112,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"5-12 years",material:"Cardboard & Plastic",brand:"MathGenius",country:"Pakistan",description:"Board game teaching addition, subtraction, multiplication, and division through fun gameplay.",features:["4 math operations","2-4 players","100 question cards","Difficulty levels"],safetyInfo:"Non-toxic. Large pieces. Ages 5+.",reviews:[{name:"Ali M.",avatar:"A",date:"Feb 2026",stars:4,text:"Kids enjoy doing math now!"},{name:"Nasreen P.",avatar:"N",date:"Jan 2026",stars:4,text:"Fun way to learn math."}]},
+  {id:63,name:"Robotics Building Kit 500pc",image:IMG+"1624253321171-1be53e12f5f4?w=400&h=400&fit=crop",category:"educational",subcategory:"stem",price:5999,oldPrice:7999,rating:4.7,reviewCount:45,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"8-16 years",material:"ABS Plastic & Metal",brand:"RoboKit",country:"South Korea",description:"Build 12 different robots with motor, sensors, and programmable controller.",features:["500+ pieces","12 robot designs","Motor and sensors","Programmable controller"],safetyInfo:"CE and FCC certified. Ages 8+.",reviews:[{name:"Hamza A.",avatar:"H",date:"Mar 2026",stars:5,text:"Built a line-following robot!"},{name:"Saima J.",avatar:"S",date:"Feb 2026",stars:5,text:"Best STEM investment."}]},
+  {id:64,name:"Chemistry Lab Junior",image:IMG+"1532094349884-543bc11b234d?w=400&h=400&fit=crop",category:"educational",subcategory:"science",price:2999,oldPrice:3999,rating:4.5,reviewCount:89,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"8-14 years",material:"Mixed Materials",brand:"LabKids",country:"China",description:"50 science experiments including volcano eruptions, crystal growing, and slime making!",features:["50 experiments","Step-by-step guide","Safety goggles included","Lab notebook"],safetyInfo:"Non-toxic chemicals. Adult supervision required. Ages 8+.",reviews:[{name:"Faisal R.",avatar:"F",date:"Jan 2026",stars:5,text:"Volcano experiment was amazing!"},{name:"Amina K.",avatar:"A",date:"Dec 2025",stars:4,text:"Great variety of experiments."}]},
+  // ---- EVERYDAY (affordable) ----
+  {id:65,name:"Classic Teddy Bear",image:IMG+"1559715541-d5bdb2cff4be?w=400&h=400&fit=crop",category:"boys",subcategory:"everyday",price:699,oldPrice:999,rating:4.3,reviewCount:234,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"All ages",material:"Soft Plush",brand:"CuddleBuddy",country:"Pakistan",description:"Classic soft teddy bear. Affordable cuddle companion for every child.",features:["Soft plush fur","12 inches tall","Machine washable","Hypoallergenic"],safetyInfo:"CE certified. Safety eyes. All ages.",reviews:[{name:"Samina T.",avatar:"S",date:"Jan 2026",stars:4,text:"Great affordable teddy bear."},{name:"Usman A.",avatar:"U",date:"Feb 2026",stars:4,text:"Good value for money."}]},
+  {id:66,name:"Colorful Building Blocks 200pc",image:IMG+"1587654780291-39c9404d7dd0?w=400&h=400&fit=crop",category:"girls",subcategory:"everyday",price:899,oldPrice:1299,rating:4.4,reviewCount:189,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"3-10 years",material:"ABS Plastic",brand:"BlockFun",country:"China",description:"200 colorful building blocks in various shapes. Build anything you imagine!",features:["200 pieces","Bright colors","Compatible with major brands","Storage bucket"],safetyInfo:"BPA-free, non-toxic. Rounded edges. Ages 3+.",reviews:[{name:"Hira M.",avatar:"H",date:"Feb 2026",stars:5,text:"Amazing value for 200 blocks!"},{name:"Nadia S.",avatar:"N",date:"Jan 2026",stars:4,text:"Good quality for the price."}]},
+  {id:67,name:"Toy Car Collection 12pc",image:IMG+"1560807707-8cc77767d783?w=400&h=400&fit=crop",category:"boys",subcategory:"everyday",price:599,oldPrice:899,rating:4.3,reviewCount:312,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"3-8 years",material:"Die-cast Metal",brand:"TurboWheels",country:"China",description:"12 colorful die-cast toy cars. Free-rolling wheels and realistic designs.",features:["12 die-cast cars","Free-rolling wheels","Colorful designs","1:64 scale"],safetyInfo:"ASTM F963 certified. Lead-free paint. Ages 3+.",reviews:[{name:"Ali M.",avatar:"A",date:"Dec 2025",stars:5,text:"12 cars for this price? Amazing!"},{name:"Kainat R.",avatar:"K",date:"Jan 2026",stars:4,text:"Nice variety, good quality."}]},
+  {id:68,name:"Sticker & Activity Book",image:IMG+"1595841696677-6489ff3f8cd1?w=400&h=400&fit=crop",category:"girls",subcategory:"everyday",price:499,oldPrice:699,rating:4.2,reviewCount:156,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"3-8 years",material:"Paper & Non-toxic Ink",brand:"FunLearn",country:"Pakistan",description:"Activity book with puzzles, coloring pages, stickers, and mazes. Screen-free fun!",features:["100+ pages","500 stickers","Coloring, puzzles, mazes","Travel-friendly"],safetyInfo:"Non-toxic inks. Rounded corners. Ages 3+.",reviews:[{name:"Fatima R.",avatar:"F",date:"Jan 2026",stars:4,text:"Keeps my daughter entertained for hours!"},{name:"Danish K.",avatar:"D",date:"Feb 2026",stars:4,text:"Good quality book."}]},
+  {id:69,name:"Foam Ball Set (6pc)",image:IMG+"1503454537195-1dcabb73ffb9?w=400&h=400&fit=crop",category:"boys",subcategory:"everyday",price:799,oldPrice:1199,rating:4.4,reviewCount:98,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"2-8 years",material:"Soft Foam",brand:"PlayTime",country:"Pakistan",description:"6 soft foam balls in different sizes and colors. Safe for indoor and outdoor play.",features:["6 foam balls","Different sizes","Soft and lightweight","Bounceable"],safetyInfo:"Non-toxic foam. No hard parts. Ages 2+.",reviews:[{name:"Sobia A.",avatar:"S",date:"Feb 2026",stars:5,text:"Perfect for toddlers!"},{name:"Khalid M.",avatar:"K",date:"Jan 2026",stars:4,text:"Good quality foam balls."}]},
+  {id:70,name:"Finger Painting Kit",image:IMG+"1513364776144-60967b0f800f?w=400&h=400&fit=crop",category:"girls",subcategory:"everyday",price:599,oldPrice:899,rating:4.3,reviewCount:134,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Standard",age:"2-8 years",material:"Non-toxic Pigments",brand:"ArtKids",country:"Pakistan",description:"Safe finger paint set with 8 vibrant colors, smock, and paper roll.",features:["8 paint colors","Child-size smock","Paper roll","Washable formula"],safetyInfo:"AP certified non-toxic. Washable. Ages 2+.",reviews:[{name:"Mariam Z.",avatar:"M",date:"Mar 2026",stars:4,text:"Easy to wash off!"},{name:"Tanya R.",avatar:"T",date:"Feb 2026",stars:5,text:"Safe and fun paints."}]},
+  {id:71,name:"Jump Rope & Outdoor Fun Set",image:IMG+"1515488042361-ee00e0ddd4e4?w=400&h=400&fit=crop",category:"boys",subcategory:"everyday",price:499,oldPrice:699,rating:4.2,reviewCount:78,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"4-12 years",material:"Nylon & Plastic",brand:"ActiveKids",country:"Pakistan",description:"Jump rope, flying disc, and skipping rope. Get active outdoors!",features:["Adjustable jump rope","Flying disc","Soft skipping rope","Carry pouch"],safetyInfo:"Non-toxic. Rounded edges. Ages 4+.",reviews:[{name:"Adnan K.",avatar:"A",date:"Jan 2026",stars:4,text:"Simple but fun set."},{name:"Rukhsana M.",avatar:"R",date:"Feb 2026",stars:4,text:"Good quality for the price."}]},
+  {id:72,name:"Board Game Family Fun",image:IMG+"1611371805429-8b8c6d397585?w=400&h=400&fit=crop",category:"girls",subcategory:"everyday",price:899,oldPrice:1299,rating:4.5,reviewCount:167,bestseller:false,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"4-Adult",material:"Cardboard & Plastic",brand:"FunZone",country:"Pakistan",description:"Classic family board game with colorful board, dice, and tokens.",features:["2-4 players","Colorful board","Dice and tokens","Easy rules"],safetyInfo:"Non-toxic. Large pieces. Ages 4+.",reviews:[{name:"Irfan K.",avatar:"I",date:"Feb 2026",stars:5,text:"Family game night favorite!"},{name:"Parveen S.",avatar:"P",date:"Jan 2026",stars:4,text:"Fun for all ages."}]},
+  // ---- MIXED BESTSELLERS & NEW ----
+  {id:73,name:"Musical Instrument Set",image:IMG+"1598488035139-bdbb2231ce04?w=400&h=400&fit=crop",category:"girls",subcategory:"educational",price:1799,oldPrice:2499,rating:4.6,reviewCount:123,bestseller:true,isNew:true,onSale:true,inStock:true,quality:"Standard",age:"3-10 years",material:"Wood & Metal",brand:"MusicKids",country:"Pakistan",description:"10-piece musical instrument set including xylophone, drum, maracas, and trumpet.",features:["10 instruments","Xylophone with mallet","Hand drum","Carrying bag"],safetyInfo:"Non-toxic finishes. Ages 3+.",reviews:[{name:"Sana T.",avatar:"S",date:"Feb 2026",stars:5,text:"Concert every evening!"},{name:"Omar K.",avatar:"O",date:"Mar 2026",stars:4,text:"Good quality instruments."}]},
+  {id:74,name:"Space Explorer Building Set",image:IMG+"1615497001839-b0a0eac3274c?w=400&h=400&fit=crop",category:"boys",subcategory:"building",price:3799,oldPrice:4999,rating:4.5,reviewCount:72,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"6-14 years",material:"ABS Plastic",brand:"SpaceKit",country:"China",description:"Build rockets, space stations, and rovers with 600-piece space set.",features:["600+ pieces","3 space models","Astronaut minifigures","Light-up rocket"],safetyInfo:"CE certified. Ages 6+.",reviews:[{name:"Imran B.",avatar:"I",date:"Feb 2026",stars:5,text:"Space-loving son adores this!"},{name:"Nazia K.",avatar:"N",date:"Mar 2026",stars:4,text:"Great quality pieces."}]},
+  {id:75,name:"Dinosaur Adventure Set 12pc",image:IMG+"1618923850107-d1a234ef2b1f?w=400&h=400&fit=crop",category:"girls",subcategory:"soft",price:1499,oldPrice:1999,rating:4.7,reviewCount:156,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"3-12 years",material:"Non-toxic PVC",brand:"DinoWorld",country:"China",description:"12 realistic hand-painted dinosaur figures with educational info card.",features:["12 unique dinosaurs","Hand-painted details","Realistic sizes","Carrying case"],safetyInfo:"CE certified. BPA-free. Ages 3+.",reviews:[{name:"Hamza A.",avatar:"H",date:"Dec 2025",stars:5,text:"Knows every dinosaur name now!"},{name:"Saima J.",avatar:"S",date:"Jan 2026",stars:5,text:"Great quality paint."}]},
+  {id:76,name:"Turbo RC Racing Car",image:IMG+"1558618666-fcd25c85f82e?w=400&h=400&fit=crop",category:"boys",subcategory:"rc",price:3499,oldPrice:4999,rating:4.6,reviewCount:189,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Premium",age:"6-16 years",material:"ABS Plastic & Rubber",brand:"SpeedKing",country:"China",description:"High-speed RC car with 30km/h top speed and 4-wheel suspension.",features:["30 km/h speed","2.4GHz remote","4-wheel suspension","30 min battery"],safetyInfo:"CE and FCC certified. Ages 6+.",reviews:[{name:"Bilal K.",avatar:"B",date:"Nov 2025",stars:5,text:"This car is FAST!"},{name:"Asif M.",avatar:"A",date:"Jan 2026",stars:4,text:"Great speed and durability."}]},
+  {id:77,name:"Coding Robot Kit",image:IMG+"1576020799627-aeac74d58064?w=400&h=400&fit=crop",category:"educational",subcategory:"coding",price:4999,oldPrice:6999,rating:4.8,reviewCount:89,bestseller:true,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"7-16 years",material:"ABS Plastic & Electronics",brand:"CodeBot",country:"South Korea",description:"Build and program your own robot with drag-and-drop and Python coding.",features:["Drag-and-drop coding","Python mode","10+ robot designs","Bluetooth"],safetyInfo:"FCC and CE certified. Ages 7+.",reviews:[{name:"Shahid K.",avatar:"S",date:"Mar 2026",stars:5,text:"Built his first robot!"},{name:"Zeenat A.",avatar:"Z",date:"Feb 2026",stars:5,text:"Best STEM investment."}]},
+  {id:78,name:"Premium Gift Set - Boys Edition",image:IMG+"1563911892437-1feda0179e1b?w=400&h=400&fit=crop",category:"premium",subcategory:"giftsets",price:8999,oldPrice:11999,rating:4.8,reviewCount:34,bestseller:true,isNew:true,onSale:true,inStock:true,quality:"Premium",age:"4-12 years",material:"Mixed Premium Materials",brand:"ToyVerse Premium",country:"Pakistan",description:"Curated gift box with RC car, building set, puzzle, art kit, and birthday card.",features:["5 premium gifts","Personalized card","Luxury wrapping","Storage gift box"],safetyInfo:"All items tested. Ages 4+.",reviews:[{name:"Asif R.",avatar:"A",date:"Feb 2026",stars:5,text:"Best birthday gift ever!"},{name:"Hira M.",avatar:"H",date:"Mar 2026",stars:5,text:"Beautifully packaged."}]},
+  {id:79,name:"Imported LEGO Creator Set",image:IMG+"1587654780291-39c9404d7dd0?w=400&h=400&fit=crop",category:"imported",subcategory:"building",price:8999,oldPrice:11999,rating:4.8,reviewCount:67,bestseller:false,isNew:true,onSale:true,inStock:true,quality:"Imported",age:"8-16 years",material:"ABS Plastic",brand:"LEGO",country:"Denmark",description:"3-in-1 LEGO Creator set: house, shop, or cafe. Over 700 pieces.",features:["3-in-1 models","700+ pieces","Detailed instructions","Display worthy"],safetyInfo:"Original LEGO. EN71 certified. Ages 8+.",reviews:[{name:"Waqas K.",avatar:"W",date:"Feb 2026",stars:5,text:"3 models in 1!"},{name:"Sobia A.",avatar:"S",date:"Mar 2026",stars:5,text:"Genuine LEGO quality."}]},
+  {id:80,name:"Super Hero Action Figure Pack",image:IMG+"1594787318286-3d835c1d207f?w=400&h=400&fit=crop",category:"boys",subcategory:"action",price:2199,oldPrice:2999,rating:4.5,reviewCount:145,bestseller:true,isNew:false,onSale:true,inStock:true,quality:"Standard",age:"4-12 years",material:"PVC & ABS Plastic",brand:"HeroForce",country:"China",description:"4 superhero action figures with 20+ articulation points and battle accessories.",features:["4 figures","20+ joints each","Battle accessories","Display stands"],safetyInfo:"EN71 certified. Non-toxic. Ages 4+.",reviews:[{name:"Saad Q.",avatar:"S",date:"Jan 2026",stars:5,text:"Hero battles all day!"},{name:"Amina R.",avatar:"A",date:"Feb 2026",stars:4,text:"Good quality, sturdy joints."}]}
+];;
+
+/* ============ UTILITY FUNCTIONS ============ */
+function formatPrice(n) { return 'Rs ' + Number(n).toLocaleString('en-PK'); }
+
+function renderStars(rating) {
+  var full = Math.floor(rating);
+  var half = rating % 1 >= 0.5 ? 1 : 0;
+  var empty = 5 - full - half;
+  return '\u2605'.repeat(full) + (half ? '\u00BD' : '') + '\u2606'.repeat(empty);
+}
+
+function getProductById(id) {
+  for (var i = 0; i < PRODUCTS.length; i++) {
+    if (PRODUCTS[i].id === id) return PRODUCTS[i];
   }
-];
-// CONTINUED IN PART 2 - DO NOT DELETE THIS LINE
+  return null;
+}
+
+function getRelatedProducts(product, count) {
+  return PRODUCTS.filter(function(p) {
+    return p.id !== product.id && (p.category === product.category || p.subcategory === product.subcategory);
+  }).slice(0, count);
+}
+
+/* ============ PRODUCT CARD ============ */
+function productCard(p) {
+  var discount = Math.round((1 - p.price / p.oldPrice) * 100);
+  var badge = '';
+  if (p.isNew) badge = '<span class="card-badge badge-new">New</span>';
+  else if (p.bestseller) badge = '<span class="card-badge badge-best">Best Seller</span>';
+  else if (p.quality === 'Premium') badge = '<span class="card-badge badge-premium">Premium</span>';
+  else if (p.quality === 'Imported') badge = '<span class="card-badge badge-imported">Imported</span>';
+  else if (p.onSale) badge = '<span class="card-badge badge-sale">Sale</span>';
+
+  return '<div class="product-card" onclick="location.href=\'product.html?id=' + p.id + '\'">' +
+    '<div class="card-img">' +
+      '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy">' +
+      badge +
+      '<button class="card-wishlist" onclick="event.stopPropagation();toggleWishlist(' + p.id + ');this.classList.toggle(\'active\')" title="Wishlist">' + (isInWishlist(p.id) ? '\u2665' : '\u2661') + '</button>' +
+    '</div>' +
+    '<div class="card-body">' +
+      '<div class="card-cat">' + p.subcategory + '</div>' +
+      '<div class="card-title">' + p.name + '</div>' +
+      '<div class="card-rating">' + renderStars(p.rating) + ' <span>(' + p.reviewCount + ')</span></div>' +
+      '<div class="card-price">' + formatPrice(p.price) +
+        (p.onSale ? '<span class="card-old">' + formatPrice(p.oldPrice) + '</span>' : '') +
+        (p.onSale ? '<span class="card-discount">-' + discount + '%</span>' : '') +
+      '</div>' +
+      '<button class="card-cart-btn" onclick="event.stopPropagation();addToCart(' + p.id + ',1)">Add to Cart</button>' +
+    '</div>' +
+  '</div>';
+}
+
+/* ============ CART SYSTEM ============ */
+function getCart() {
+  try { return JSON.parse(localStorage.getItem('tv_cart')) || []; } catch(e) { return []; }
+}
+
+function saveCart(cart) {
+  localStorage.setItem('tv_cart', JSON.stringify(cart));
+  updateCartBadge();
+}
+
+function addToCart(id, qty) {
+  var cart = getCart();
+  var product = getProductById(id);
+  if (!product) return;
+  var found = false;
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].id === id) { cart[i].qty += qty; found = true; break; }
+  }
+  if (!found) {
+    cart.push({ id: product.id, name: product.name, image: product.image, price: product.price, emoji: product.image, subcategory: product.subcategory, qty: qty });
+  }
+  saveCart(cart);
+  showToast(product.name + ' added to cart!');
+}
+
+function removeFromCart(id) {
+  var cart = getCart().filter(function(item) { return item.id !== id; });
+  saveCart(cart);
+}
+
+function updateCartQty(id, qty) {
+  var cart = getCart();
+  if (qty <= 0) { removeFromCart(id); return; }
+  for (var i = 0; i < cart.length; i++) {
+    if (cart[i].id === id) { cart[i].qty = qty; break; }
+  }
+  saveCart(cart);
+}
+
+function getCartCount() {
+  return getCart().reduce(function(sum, item) { return sum + item.qty; }, 0);
+}
+
+function getCartTotal() {
+  return getCart().reduce(function(sum, item) { return sum + item.price * item.qty; }, 0);
+}
+
+function updateCartBadge() {
+  var badges = document.querySelectorAll('.cart-badge, .cart-count');
+  var count = getCartCount();
+  badges.forEach(function(b) { b.textContent = count; b.style.display = count > 0 ? 'flex' : 'none'; });
+}
+
+/* ============ WISHLIST SYSTEM ============ */
+function getWishlist() {
+  try { return JSON.parse(localStorage.getItem('tv_wishlist')) || []; } catch(e) { return []; }
+}
+
+function saveWishlist(list) {
+  localStorage.setItem('tv_wishlist', JSON.stringify(list));
+  updateWishlistBadge();
+}
+
+function toggleWishlist(id) {
+  var list = getWishlist();
+  var idx = list.indexOf(id);
+  if (idx > -1) { list.splice(idx, 1); showToast('Removed from wishlist'); }
+  else { list.push(id); showToast('Added to wishlist!'); }
+  saveWishlist(list);
+}
+
+function isInWishlist(id) {
+  return getWishlist().indexOf(id) > -1;
+}
+
+function updateWishlistBadge() {
+  var badges = document.querySelectorAll('.wishlist-badge, .wish-count');
+  var count = getWishlist().length;
+  badges.forEach(function(b) { b.textContent = count; b.style.display = count > 0 ? 'flex' : 'none'; });
+}
+
+/* ============ TOAST ============ */
+function showToast(msg) {
+  var toast = document.getElementById('toast');
+  if (!toast) { toast = document.createElement('div'); toast.id='toast'; toast.className='toast'; document.body.appendChild(toast); }
+  toast.textContent = msg;
+  toast.classList.add('show');
+  setTimeout(function() { toast.classList.remove('show'); }, 2500);
+}
+
+/* ============ SEARCH ============ */
+function initSearch() {
+  var inputs = document.querySelectorAll('.search-bar input');
+  inputs.forEach(function(input) {
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        var q = this.value.trim().toLowerCase();
+        if (q) location.href = 'category.html?cat=all&q=' + encodeURIComponent(q);
+      }
+    });
+  });
+}
+
+/* ============ UI INIT ============ */
+document.addEventListener('DOMContentLoaded', function() {
+  updateCartBadge();
+  updateWishlistBadge();
+  initSearch();
+
+  document.querySelectorAll('.hamburger-menu, .hamburger, .mobile-toggle').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var overlay = document.getElementById('mobileMenuOverlay') || document.getElementById('mobileMenu');
+      if (overlay) overlay.classList.add('open');
+    });
+  });
+  document.querySelectorAll('.mobile-menu-close, #mobileMenuClose').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var overlay = document.getElementById('mobileMenuOverlay') || document.getElementById('mobileMenu');
+      if (overlay) overlay.classList.remove('open');
+    });
+  });
+
+  var backToTop = document.getElementById('backToTop');
+  if (backToTop) {
+    window.addEventListener('scroll', function() {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  document.querySelectorAll('.newsletter-form, #newsletterForm').forEach(function(form) {
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      showToast('Thank you for subscribing to ToyVerse!');
+      this.reset();
+    });
+  });
+});

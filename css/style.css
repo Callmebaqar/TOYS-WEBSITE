@@ -662,11 +662,22 @@ textarea {
 }
 
 .product-card .card-img {
-  background: var(--bg);
+  background: var(--gray-lightest);
   text-align: center;
-  padding: 32px;
-  font-size: 4rem;
+  padding: 0;
   position: relative;
+  overflow: hidden;
+  height: 240px;
+}
+.product-card .card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.product-card:hover .card-img img {
+  transform: scale(1.05);
 }
 
 .product-card .card-body {

@@ -263,6 +263,16 @@
       var mainImg = document.getElementById('mainImage');
       mainImg.src = product.image;
       mainImg.alt = product.name;
+      var catGrad = CATEGORY_GRADIENTS[product.category] || CATEGORY_GRADIENTS.default;
+      var catEmo = (CATEGORY_EMOJIS[product.category] && CATEGORY_EMOJIS[product.category][product.subcategory]) || (CATEGORY_EMOJIS[product.category] && CATEGORY_EMOJIS[product.category]['default']) || '\uD83C\uDFAE';
+      mainImg.onerror = function() {
+        this.style.display = 'none';
+        var fb = document.createElement('div');
+        fb.className = 'card-img-fallback';
+        fb.style.cssText = 'display:flex;background:' + catGrad + ';border-radius:12px;min-height:300px;flex-direction:column;align-items:center;justify-content:center;gap:12px;';
+        fb.innerHTML = '<span class="fallback-emoji" style="font-size:6rem;">' + catEmo + '</span><span class="fallback-name" style="font-size:1rem;font-weight:600;color:#555;text-align:center;padding:0 16px;">' + product.name + '</span>';
+        this.parentElement.appendChild(fb);
+      };
 
       var thumbsContainer = document.getElementById('thumbnails');
       var images = [product.image];
@@ -459,7 +469,12 @@
           rpContainer.innerHTML += productCard(rp);
         } else {
           rpContainer.innerHTML += '<div class="product-card" onclick="location.href=\'product.html?id=' + rp.id + '\'">'
-            + '<div class="card-img"><img src="' + rp.image + '" alt="' + rp.name + '" style="width:100%;height:200px;object-fit:cover;border-radius:12px;"></div>'
+            + '<div class="card-img" style="background:' + (CATEGORY_GRADIENTS[rp.category] || CATEGORY_GRADIENTS.default) + '">'
+            + '<img src="' + rp.image + '" alt="' + rp.name + '" style="width:100%;height:200px;object-fit:cover;border-radius:12px;" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">'
+            + '<div class="card-img-fallback" style="display:none;background:' + (CATEGORY_GRADIENTS[rp.category] || CATEGORY_GRADIENTS.default) + ';border-radius:12px;height:200px;flex-direction:column;align-items:center;justify-content:center;gap:8px;">'
+            + '<span style="font-size:3rem;">' + ((CATEGORY_EMOJIS[rp.category] && CATEGORY_EMOJIS[rp.category][rp.subcategory]) || (CATEGORY_EMOJIS[rp.category] && CATEGORY_EMOJIS[rp.category]['default']) || '\uD83C\uDFAE') + '</span>'
+            + '<span style="font-size:0.75rem;font-weight:600;color:#555;text-align:center;padding:0 12px;">' + rp.name + '</span>'
+            + '</div></div>'
             + '<div class="card-body">'
             + '<div class="card-cat">' + (rp.subcategory || rp.category) + '</div>'
             + '<div class="card-title">' + rp.name + '</div>'

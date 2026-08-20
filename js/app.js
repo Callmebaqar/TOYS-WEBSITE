@@ -1395,6 +1395,32 @@ function getRelatedProducts(product, count) {
 }
 
 /* ============ PRODUCT CARD ============ */
+var CATEGORY_GRADIENTS = {
+  girls: 'linear-gradient(135deg, #fce4ec, #f8bbd0)',
+  boys: 'linear-gradient(135deg, #e3f2fd, #90caf9)',
+  educational: 'linear-gradient(135deg, #e8f5e9, #a5d6a7)',
+  premium: 'linear-gradient(135deg, #fff8e1, #ffe082)',
+  imported: 'linear-gradient(135deg, #e0f7fa, #80deea)',
+  default: 'linear-gradient(135deg, #f3e5f5, #ce93d8)'
+};
+var CATEGORY_EMOJIS = {
+  girls: { dolls: '\uD83D\uDC85', dollhouses: '\uD83C\uDFE0', soft: '\uD83E\uDDF8', roleplay: '\uD83C\uDFAD', arts: '\uD83C\uDFA8', giftsets: '\uD83C\uDF81', everyday: '\uD83C\uDF88', default: '\uD83D\uDC67' },
+  boys: { rc: '\uD83C\uDFCE\uFE0F', action: '\uD83D\uDCA5', building: '\uD83E\uDDF1', everyday: '\u26BD', soft: '\uD83E\uDDF8', default: '\uD83D\uDC66' },
+  educational: { stem: '\uD83E\uDDEA', science: '\uD83D\uDD2C', coding: '\uD83D\uDCBB', montessori: '\uD83E\uDDE0', building: '\uD83E\uDDF1', learning: '\uD83D\uDCD6', default: '\uD83C\uDF93' },
+  premium: { giftsets: '\uD83C\uDF81', stem: '\uD83E\uDDEA', building: '\uD83E\uDDF1', rc: '\u2708\uFE0F', dollhouses: '\uD83C\uDFE0', soft: '\uD83C\uDF88', default: '\u2B50' },
+  imported: { building: '\uD83D\uDDFF\uFE0F', dolls: '\uD83D\uDC84', rc: '\uD83C\uDFCE\uFE0F', stem: '\uD83E\uDDEA', puzzles: '\uD83E\uDDE9', soft: '\uD83C\uDF80', arts: '\uD83C\uDFA8', educational: '\uD83D\uDCDA', everyday: '\uD83C\uDF88', default: '\uD83C\uDF0D' },
+  default: { default: '\uD83C\uDFAE' }
+};
+
+function getCategoryEmoji(p) {
+  var cat = CATEGORY_EMOJIS[p.category] || CATEGORY_EMOJIS.default;
+  return cat[p.subcategory] || cat.default;
+}
+
+function getCategoryGradient(p) {
+  return CATEGORY_GRADIENTS[p.category] || CATEGORY_GRADIENTS.default;
+}
+
 function productCard(p) {
   var discount = Math.round((1 - p.price / p.oldPrice) * 100);
   var badge = '';
@@ -1404,9 +1430,16 @@ function productCard(p) {
   else if (p.quality === 'Imported') badge = '<span class="card-badge badge-imported">Imported</span>';
   else if (p.onSale) badge = '<span class="card-badge badge-sale">Sale</span>';
 
+  var emoji = getCategoryEmoji(p);
+  var gradient = getCategoryGradient(p);
+
   return '<div class="product-card" onclick="location.href=\'product.html?id=' + p.id + '\'">' +
-    '<div class="card-img">' +
-      '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy">' +
+    '<div class="card-img" style="background:' + gradient + '">' +
+      '<img src="' + p.image + '" alt="' + p.name + '" loading="lazy" onerror="this.style.display=\'none\';this.nextElementSibling.style.display=\'flex\'">' +
+      '<div class="card-img-fallback" style="display:none;background:' + gradient + '">' +
+        '<span class="fallback-emoji">' + emoji + '</span>' +
+        '<span class="fallback-name">' + p.name + '</span>' +
+      '</div>' +
       badge +
       '<button class="card-wishlist" onclick="event.stopPropagation();toggleWishlist(' + p.id + ');this.classList.toggle(\'active\')" title="Wishlist">' + (isInWishlist(p.id) ? '\u2665' : '\u2661') + '</button>' +
     '</div>' +

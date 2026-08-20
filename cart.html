@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ToyVerse - Shopping Cart</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.cart-section{max-width:1280px;margin:32px auto;padding:0 24px;display:grid;grid-template-columns:1fr 380px;gap:32px;align-items:start}
+.cart-items{display:flex;flex-direction:column;gap:16px}
+.cart-item{background:var(--card);border-radius:var(--radius);padding:20px;display:flex;gap:20px;align-items:center;box-shadow:var(--shadow);transition:transform .2s}
+.cart-item:hover{transform:translateX(4px)}
+.cart-item-emoji{font-size:3rem;width:80px;height:80px;background:var(--bg);border-radius:12px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.cart-item-info{flex:1}
+.cart-item-name{font-weight:700;font-size:1.05rem;margin-bottom:4px}
+.cart-item-sub{color:var(--text-light);font-size:.85rem}
+.cart-item-price{color:var(--primary);font-weight:800;font-size:1.1rem;margin-top:8px}
+.cart-item-actions{display:flex;align-items:center;gap:16px}
+.cart-remove{background:none;border:none;color:var(--danger);font-size:1.2rem;cursor:pointer;padding:8px;border-radius:8px;transition:background .2s}
+.cart-remove:hover{background:#ffe0e0}
+.order-summary{background:var(--card);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);position:sticky;top:120px}
+.order-summary h2{font-size:1.3rem;margin-bottom:20px;padding-bottom:16px;border-bottom:2px solid var(--border)}
+.summary-row{display:flex;justify-content:space-between;padding:10px 0;font-size:.95rem}
+.summary-row.total{border-top:2px solid var(--border);margin-top:12px;padding-top:16px;font-weight:800;font-size:1.15rem}
+.summary-row .free{color:var(--accent);font-weight:700}
+.coupon-section{margin:20px 0;display:flex;gap:0}
+.coupon-section input{flex:1;padding:12px 16px;border:2px solid var(--border);border-radius:12px 0 0 12px;font-size:.9rem}
+.coupon-section input:focus{outline:none;border-color:var(--primary)}
+.coupon-section button{padding:12px 20px;background:var(--secondary);color:#fff;border:none;border-radius:0 12px 12px 0;font-weight:700;cursor:pointer;transition:background .2s}
+.coupon-section button:hover{background:#5a4bd1}
+.coupon-msg{font-size:.85rem;margin-top:4px;min-height:20px}
+.coupon-msg.success{color:var(--accent)}
+.coupon-msg.error{color:var(--danger)}
+.checkout-btn{width:100%;padding:16px;background:var(--primary);color:#fff;border:none;border-radius:12px;font-size:1.1rem;font-weight:800;cursor:pointer;margin-top:20px;transition:all .2s}
+.checkout-btn:hover{background:var(--primary-dark);transform:translateY(-2px);box-shadow:0 6px 20px rgba(255,107,53,.3)}
+.continue-link{display:block;text-align:center;margin-top:16px;color:var(--text-light);font-weight:600;transition:color .2s}
+.continue-link:hover{color:var(--primary)}
+.page-title{max-width:1280px;margin:0 auto;padding:32px 24px 0;font-size:2rem;font-weight:800}
+.empty-state{text-align:center;padding:80px 24px}
+.empty-state .empty-icon{font-size:6rem;margin-bottom:16px;opacity:.4}
+.empty-state h2{font-size:1.5rem;margin-bottom:8px}
+.empty-state p{color:var(--text-light);margin-bottom:24px}
+.empty-state .btn{margin-top:8px}
+@media(max-width:768px){.cart-section{grid-template-columns:1fr}.order-summary{position:static}.cart-item{flex-wrap:wrap}.cart-item-actions{width:100%;justify-content:space-between;margin-top:8px}}
+</style>
+</head>
+<body>
+
+<div class="announcement-bar">
+  <span>&#127881; Free Shipping on Orders Over Rs 5,000!</span> | <span>&#128230; Same-Day Delivery in Karachi, Lahore &amp; Islamabad</span> | <span>&#127873; Use Code TOYVERSE10 for 10% Off</span>
+</div>
+<nav class="navbar">
+  <div class="navbar-inner">
+    <button class="mobile-toggle" aria-label="Menu">&#9776;</button>
+    <a href="index.html" class="logo"><span class="icon">&#129528;</span> ToyVerse</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="search-bar">
+      <input type="text" placeholder="Search toys, categories...">
+      <button>&#128269;</button>
+    </div>
+    <div class="nav-icons">
+      <button class="nav-icon" title="Wishlist" onclick="location.href='wishlist.html'">&#9825;<span class="badge wishlist-badge">0</span></button>
+      <button class="nav-icon" title="Cart" onclick="location.href='cart.html'">&#128722;<span class="badge cart-badge">0</span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-content">
+    <button class="mobile-menu-close">&times;</button>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="categories.html">Categories</a></li>
+      <li><a href="new-arrivals.html">New Arrivals</a></li>
+      <li><a href="deals.html">Deals</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="wishlist.html">Wishlist</a></li>
+      <li><a href="cart.html">Cart</a></li>
+    </ul>
+  </div>
+</div>
+
+<h1 class="page-title">&#128722; Shopping Cart</h1>
+
+<section class="cart-section">
+  <div class="cart-items" id="cart-items"></div>
+  <div class="order-summary" id="order-summary">
+    <h2>Order Summary</h2>
+    <div class="summary-row"><span>Subtotal</span><span id="summary-subtotal">Rs 0</span></div>
+    <div class="summary-row"><span>Shipping</span><span id="summary-shipping">Rs 0</span></div>
+    <div class="summary-row"><span>Tax (5%)</span><span id="summary-tax">Rs 0</span></div>
+    <div class="coupon-section">
+      <input type="text" id="coupon-input" placeholder="Coupon code">
+      <button onclick="applyCoupon()">Apply</button>
+    </div>
+    <div class="coupon-msg" id="coupon-msg"></div>
+    <div class="summary-row"><span>Discount</span><span id="summary-discount">- Rs 0</span></div>
+    <div class="summary-row total"><span>Total</span><span id="summary-total">Rs 0</span></div>
+    <button class="checkout-btn" onclick="location.href='checkout.html'">Proceed to Checkout &#10132;</button>
+    <a href="index.html" class="continue-link">&larr; Continue Shopping</a>
+  </div>
+</section>
+
+<section class="newsletter">
+  <h2>Stay in the Loop!</h2>
+  <p>Get the latest toy arrivals, deals, and parenting tips delivered to your inbox.</p>
+  <form class="newsletter-form" onsubmit="alert('Thanks for subscribing!');return false;">
+    <input type="email" placeholder="Enter your email address" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo"><span class="icon">&#129528;</span> ToyVerse</div>
+      <p>Pakistan&#39;s trusted online toy store. Safe, fun, and educational toys for every child. Quality you can trust, prices you&#39;ll love.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="shipping.html">Shipping Policy</a></li>
+        <li><a href="returns.html">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Categories</h4>
+      <ul>
+        <li><a href="categories.html">Stuffed Animals</a></li>
+        <li><a href="categories.html">Building Toys</a></li>
+        <li><a href="categories.html">Educational</a></li>
+        <li><a href="categories.html">Remote Control</a></li>
+        <li><a href="categories.html">Pretend Play</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Info</h4>
+      <ul>
+        <li>&#128205; Plot 42, Gulshan-e-Iqbal, Karachi</li>
+        <li>&#128222; +92 300 1234567</li>
+        <li>&#128231; info@toyverse.pk</li>
+        <li>&#128336; Mon - Sat: 9AM - 9PM</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 ToyVerse. All rights reserved. Made with &#10084; in Pakistan.</p>
+  </div>
+</footer>
+
+<script src="js/app.js"></script>
+<script>
+var couponApplied=false;
+var discountPct=0;
+
+function applyCoupon(){
+  var code=document.getElementById('coupon-input').value.trim().toUpperCase();
+  var msg=document.getElementById('coupon-msg');
+  if(code==='TOYVERSE10'){
+    couponApplied=true;
+    discountPct=10;
+    msg.className='coupon-msg success';
+    msg.textContent='Coupon applied! 10% discount activated.';
+  }else{
+    couponApplied=false;
+    discountPct=0;
+    msg.className='coupon-msg error';
+    msg.textContent='Invalid coupon code.';
+  }
+  renderSummary();
+}
+
+function renderCart(){
+  var cart=getCart();
+  var container=document.getElementById('cart-items');
+  var summary=document.getElementById('order-summary');
+  if(cart.length===0){
+    container.innerHTML='<div class="empty-state"><div class="empty-icon">&#128722;</div><h2>Your cart is empty</h2><p>Looks like you haven\'t added any toys yet. Let\'s find something amazing!</p><a href="index.html" class="btn btn-primary">Start Shopping</a></div>';
+    summary.style.display='none';
+    return;
+  }
+  summary.style.display='block';
+  var html='';
+  cart.forEach(function(item){
+    html+='<div class="cart-item">';
+    html+='<div class="cart-item-emoji">'+item.emoji+'</div>';
+    html+='<div class="cart-item-info">';
+    html+='<div class="cart-item-name">'+item.name+'</div>';
+    html+='<div class="cart-item-sub">'+item.subcategory+'</div>';
+    html+='<div class="cart-item-price">'+formatPrice(item.price)+'</div>';
+    html+='</div>';
+    html+='<div class="cart-item-actions">';
+    html+='<div class="quantity-selector">';
+    html+='<button onclick="cartChangeQty('+item.id+','+(item.qty-1)+')">&#8722;</button>';
+    html+='<input type="text" class="qty-val" value="'+item.qty+'" readonly>';
+    html+='<button onclick="cartChangeQty('+item.id+','+(item.qty+1)+')">+</button>';
+    html+='</div>';
+    html+='<button class="cart-remove" onclick="cartRemove('+item.id+')" title="Remove">&#128465;</button>';
+    html+='</div>';
+    html+='</div>';
+  });
+  container.innerHTML=html;
+  renderSummary();
+}
+
+function renderSummary(){
+  var cart=getCart();
+  var subtotal=cart.reduce(function(s,i){return s+i.price*i.qty},0);
+  var shipping=subtotal>=5000?0:250;
+  var tax=Math.round(subtotal*0.05);
+  var discountAmt=couponApplied?Math.round(subtotal*discountPct/100):0;
+  var total=subtotal+shipping+tax-discountAmt;
+  document.getElementById('summary-subtotal').textContent=formatPrice(subtotal);
+  document.getElementById('summary-shipping').innerHTML=shipping===0?'<span class="free">FREE</span>':formatPrice(shipping);
+  document.getElementById('summary-tax').textContent=formatPrice(tax);
+  document.getElementById('summary-discount').textContent=discountAmt>0?'- '+formatPrice(discountAmt):'- '+formatPrice(0);
+  document.getElementById('summary-total').textContent=formatPrice(total);
+}
+
+function cartChangeQty(id,qty){
+  updateCartQty(id,qty);
+  renderCart();
+}
+
+function cartRemove(id){
+  removeFromCart(id);
+  renderCart();
+}
+
+renderCart();
+</script>
+</body>
+</html>

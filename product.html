@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToyVerse - Product Detail</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free delivery on orders over Rs 5,000! Use code <strong>TOYVERSE10</strong> for 10% off</p>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">🧸 ToyVerse</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="category.html?cat=girls">Girls</a>
+        <a href="category.html?cat=boys">Boys</a>
+        <a href="category.html?cat=premium">Premium</a>
+        <a href="category.html?cat=imported">Imported</a>
+        <a href="category.html?cat=educational">Educational</a>
+        <a href="category.html?cat=new">New Arrivals</a>
+        <a href="category.html?cat=bestsellers">Best Sellers</a>
+        <a href="category.html?cat=sale">Sale</a>
+      </nav>
+      <div class="navbar-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search toys..." class="search-input">
+          <button class="search-btn">&#128269;</button>
+        </div>
+        <a href="wishlist.html" class="icon-link wishlist-icon">
+          &#9825;
+          <span class="badge" id="wishlistBadge">0</span>
+        </a>
+        <a href="cart.html" class="icon-link cart-icon">
+          &#128722;
+          <span class="badge" id="cartBadge">0</span>
+        </a>
+        <button class="hamburger-menu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="category.html?cat=girls">Girls</a>
+      <a href="category.html?cat=boys">Boys</a>
+      <a href="category.html?cat=premium">Premium</a>
+      <a href="category.html?cat=imported">Imported</a>
+      <a href="category.html?cat=educational">Educational</a>
+      <a href="category.html?cat=new">New Arrivals</a>
+      <a href="category.html?cat=bestsellers">Best Sellers</a>
+      <a href="category.html?cat=sale">Sale</a>
+    </div>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <a href="index.html">Home</a><span class="sep">&rsaquo;</span>
+    <a href="category.html" id="bc-category">Category</a><span class="sep">&rsaquo;</span>
+    <span id="bc-product">Product</span>
+  </div>
+
+  <!-- Product Section: Gallery + Info -->
+  <section class="product-section">
+    <div class="product-gallery">
+      <div class="main-image">
+        <img id="mainImage" src="" alt="Product Image">
+      </div>
+      <div class="thumbnails" id="thumbnails"></div>
+    </div>
+    <div class="product-info">
+      <span class="category-tag" id="p-category">Category</span>
+      <h1 id="p-name">Product Name</h1>
+      <div class="rating">
+        <span class="stars" id="p-stars"></span>
+        <span class="count" id="p-reviews">(0 reviews)</span>
+      </div>
+      <div class="price-block">
+        <span class="price" id="p-price">Rs 0</span>
+        <span class="old-price" id="p-old-price"></span>
+        <span class="discount-badge" id="p-discount"></span>
+      </div>
+      <div class="availability" id="p-availability"></div>
+      <table class="specs-table">
+        <tr><td>Age Range</td><td id="spec-age">-</td></tr>
+        <tr><td>Material</td><td id="spec-material">-</td></tr>
+        <tr><td>Brand</td><td id="spec-brand">-</td></tr>
+        <tr><td>Country of Origin</td><td id="spec-country">-</td></tr>
+        <tr><td>Quality Level</td><td id="spec-quality">-</td></tr>
+      </table>
+      <div style="margin-top:16px;font-weight:700;margin-bottom:8px;">Quantity</div>
+      <div class="quantity-selector">
+        <button id="qtyMinus">&#8722;</button>
+        <input type="text" class="qty-val" id="qty-input" value="1" readonly>
+        <button id="qtyPlus">+</button>
+      </div>
+      <div class="action-buttons">
+        <button class="btn btn-primary" id="addToCartBtn">&#128722; Add to Cart</button>
+        <button class="btn btn-secondary" id="buyNowBtn">&#9889; Buy Now</button>
+        <button class="btn btn-wishlist" id="wishlist-btn">&#9825; Wishlist</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tabs Section -->
+  <section class="tabs-section">
+    <div class="tabs-header">
+      <button class="tab-btn active" data-tab="description">Description</button>
+      <button class="tab-btn" data-tab="features">Features</button>
+      <button class="tab-btn" data-tab="safety">Safety Info</button>
+      <button class="tab-btn" data-tab="reviews">Customer Reviews</button>
+    </div>
+    <div class="tab-content">
+      <div class="tab-pane active" id="tab-description"></div>
+      <div class="tab-pane" id="tab-features"></div>
+      <div class="tab-pane" id="tab-safety"></div>
+      <div class="tab-pane" id="tab-reviews"></div>
+    </div>
+  </section>
+
+  <!-- Related Products -->
+  <section>
+    <h2 class="section-heading">Related Products</h2>
+    <div class="products-grid" id="related-products"></div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <h2 class="section-title">Stay in the Loop</h2>
+      <p>Subscribe for exclusive deals, new arrivals, and playtime inspiration.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">🧸 ToyVerse</a>
+          <p>Your trusted destination for premium, educational, and fun toys. Inspiring imagination and learning through play since 2020.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="category.html?cat=girls">Girls Toys</a></li>
+            <li><a href="category.html?cat=boys">Boys Toys</a></li>
+            <li><a href="category.html?cat=premium">Premium Collection</a></li>
+            <li><a href="category.html?cat=imported">Imported Toys</a></li>
+            <li><a href="category.html?cat=new">New Arrivals</a></li>
+            <li><a href="category.html?cat=sale">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return &amp; Refund Policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ToyVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+
+      // --- Helper functions ---
+      function formatPrice(val) {
+        return 'Rs ' + Number(val).toLocaleString();
+      }
+
+      function renderStars(rating) {
+        var full = Math.floor(rating);
+        var half = rating % 1 >= 0.5 ? 1 : 0;
+        var empty = 5 - full - half;
+        var html = '';
+        for (var i = 0; i < full; i++) html += '\u2605';
+        for (var i = 0; i < half; i++) html += '\u00BD';
+        for (var i = 0; i < empty; i++) html += '\u2606';
+        return html;
+      }
+
+      function showToast(msg, type) {
+        var t = document.getElementById('toast');
+        t.textContent = msg;
+        t.className = 'toast' + (type ? ' ' + type : '');
+        setTimeout(function () { t.classList.add('show'); }, 10);
+        setTimeout(function () { t.classList.remove('show'); }, 2500);
+      }
+
+      // --- Read product from URL ---
+      var params = new URLSearchParams(window.location.search);
+      var id = parseInt(params.get('id')) || 1;
+
+      if (typeof PRODUCTS === 'undefined') {
+        document.body.innerHTML = '<div style="text-align:center;padding:80px 24px;"><h1>Product data not loaded.</h1><p>Please ensure js/app.js is included before this script.</p></div>';
+        return;
+      }
+
+      var product = null;
+      for (var i = 0; i < PRODUCTS.length; i++) {
+        if (PRODUCTS[i].id === id) { product = PRODUCTS[i]; break; }
+      }
+      if (!product) { product = PRODUCTS[0]; id = product.id; }
+
+      document.title = 'ToyVerse - ' + product.name;
+
+      // --- Breadcrumbs ---
+      var catLabel = product.category.charAt(0).toUpperCase() + product.category.slice(1);
+      document.getElementById('bc-category').textContent = catLabel;
+      document.getElementById('bc-category').href = 'category.html?cat=' + product.category;
+      document.getElementById('bc-product').textContent = product.name;
+
+      // --- Product Gallery ---
+      var mainImg = document.getElementById('mainImage');
+      mainImg.src = product.image;
+      mainImg.alt = product.name;
+
+      var thumbsContainer = document.getElementById('thumbnails');
+      var images = [product.image];
+      if (product.images && product.images.length) {
+        images = product.images;
+      }
+      images.forEach(function (src, idx) {
+        var d = document.createElement('div');
+        d.className = 'thumb' + (idx === 0 ? ' active' : '');
+        var img = document.createElement('img');
+        img.src = src;
+        img.alt = product.name + ' thumbnail ' + (idx + 1);
+        img.style.width = '100%';
+        img.style.height = '100%';
+        img.style.objectFit = 'cover';
+        img.style.borderRadius = '10px';
+        d.appendChild(img);
+        d.addEventListener('click', function () {
+          mainImg.src = src;
+          thumbsContainer.querySelectorAll('.thumb').forEach(function (t) { t.classList.remove('active'); });
+          d.classList.add('active');
+        });
+        thumbsContainer.appendChild(d);
+      });
+
+      // --- Product Info ---
+      document.getElementById('p-category').textContent = catLabel;
+      document.getElementById('p-name').textContent = product.name;
+      document.getElementById('p-stars').innerHTML = renderStars(product.rating);
+      document.getElementById('p-reviews').textContent = '(' + product.reviewCount + ' reviews)';
+      document.getElementById('p-price').textContent = formatPrice(product.price);
+
+      if (product.oldPrice && product.oldPrice > product.price) {
+        document.getElementById('p-old-price').textContent = formatPrice(product.oldPrice);
+        var discount = Math.round((1 - product.price / product.oldPrice) * 100);
+        document.getElementById('p-discount').textContent = '-' + discount + '%';
+      }
+
+      document.getElementById('p-availability').innerHTML = product.inStock
+        ? '<span class="in-stock">&#10003; In Stock</span>'
+        : '<span class="out-stock">&#10007; Out of Stock</span>';
+
+      document.getElementById('spec-age').textContent = product.age || '-';
+      document.getElementById('spec-material').textContent = product.material || '-';
+      document.getElementById('spec-brand').textContent = product.brand || '-';
+      document.getElementById('spec-country').textContent = product.country || '-';
+      document.getElementById('spec-quality').textContent = product.quality || '-';
+
+      // --- Quantity Selector ---
+      var currentQty = 1;
+      var qtyInput = document.getElementById('qty-input');
+
+      document.getElementById('qtyMinus').addEventListener('click', function () {
+        if (currentQty > 1) {
+          currentQty--;
+          qtyInput.value = currentQty;
+        }
+      });
+
+      document.getElementById('qtyPlus').addEventListener('click', function () {
+        currentQty++;
+        qtyInput.value = currentQty;
+      });
+
+      // --- Add to Cart ---
+      document.getElementById('addToCartBtn').addEventListener('click', function () {
+        if (typeof addToCart === 'function') {
+          addToCart(product.id, currentQty);
+        } else {
+          var cart = JSON.parse(localStorage.getItem('toyverse_cart') || '[]');
+          var found = false;
+          for (var c = 0; c < cart.length; c++) {
+            if (cart[c].id === product.id) { cart[c].qty += currentQty; found = true; break; }
+          }
+          if (!found) cart.push({ id: product.id, name: product.name, price: product.price, image: product.image, qty: currentQty });
+          localStorage.setItem('toyverse_cart', JSON.stringify(cart));
+        }
+        showToast('Added ' + currentQty + ' x ' + product.name + ' to cart!', 'success');
+        updateBadges();
+      });
+
+      // --- Buy Now ---
+      document.getElementById('buyNowBtn').addEventListener('click', function () {
+        if (typeof addToCart === 'function') {
+          addToCart(product.id, currentQty);
+        } else {
+          var cart = JSON.parse(localStorage.getItem('toyverse_cart') || '[]');
+          var found = false;
+          for (var c = 0; c < cart.length; c++) {
+            if (cart[c].id === product.id) { cart[c].qty += currentQty; found = true; break; }
+          }
+          if (!found) cart.push({ id: product.id, name: product.name, price: product.price, image: product.image, qty: currentQty });
+          localStorage.setItem('toyverse_cart', JSON.stringify(cart));
+        }
+        window.location.href = 'cart.html';
+      });
+
+      // --- Wishlist Toggle ---
+      function checkWishlistStatus() {
+        var wl = JSON.parse(localStorage.getItem('toyverse_wishlist') || '[]');
+        var btn = document.getElementById('wishlist-btn');
+        var inList = false;
+        for (var w = 0; w < wl.length; w++) {
+          if (wl[w] === product.id || (typeof wl[w] === 'object' && wl[w].id === product.id)) { inList = true; break; }
+        }
+        btn.innerHTML = inList ? '&#10084; Wishlisted' : '&#9825; Wishlist';
+        if (inList) { btn.classList.add('active'); } else { btn.classList.remove('active'); }
+        return inList;
+      }
+
+      document.getElementById('wishlist-btn').addEventListener('click', function () {
+        if (typeof toggleWishlist === 'function') {
+          var added = toggleWishlist(product.id);
+          var btn = document.getElementById('wishlist-btn');
+          btn.innerHTML = added ? '&#10084; Wishlisted' : '&#9825; Wishlist';
+          btn.classList.toggle('active', added);
+          showToast(added ? 'Added to wishlist!' : 'Removed from wishlist');
+        } else {
+          var wl = JSON.parse(localStorage.getItem('toyverse_wishlist') || '[]');
+          var idx = -1;
+          for (var w = 0; w < wl.length; w++) {
+            if (wl[w] === product.id || (typeof wl[w] === 'object' && wl[w].id === product.id)) { idx = w; break; }
+          }
+          if (idx >= 0) { wl.splice(idx, 1); showToast('Removed from wishlist'); }
+          else { wl.push(product.id); showToast('Added to wishlist!', 'success'); }
+          localStorage.setItem('toyverse_wishlist', JSON.stringify(wl));
+          checkWishlistStatus();
+        }
+        updateBadges();
+      });
+
+      checkWishlistStatus();
+
+      // --- Tabs ---
+      document.getElementById('tab-description').innerHTML = '<p>' + (product.description || 'No description available.') + '</p>';
+
+      var featHtml = '<ul>';
+      if (product.features && product.features.length) {
+        product.features.forEach(function (f) { featHtml += '<li>' + f + '</li>'; });
+      }
+      featHtml += '</ul>';
+      document.getElementById('tab-features').innerHTML = featHtml;
+
+      document.getElementById('tab-safety').innerHTML = '<p>' + (product.safetyInfo || 'No safety information available.') + '</p>';
+
+      var reviewsHtml = '';
+      if (product.reviews && product.reviews.length) {
+        product.reviews.forEach(function (r) {
+          reviewsHtml += '<div class="review-card">'
+            + '<div class="review-header">'
+            + '<div class="review-avatar">' + r.avatar + '</div>'
+            + '<div class="review-meta">'
+            + '<span class="name">' + r.name + '</span>'
+            + '<span class="date">' + r.date + '</span>'
+            + '</div>'
+            + '<div class="review-stars">' + renderStars(r.stars) + '</div>'
+            + '</div>'
+            + '<div class="review-text">' + r.text + '</div>'
+            + '</div>';
+        });
+      } else {
+        reviewsHtml = '<p>No reviews yet. Be the first to review this product!</p>';
+      }
+      document.getElementById('tab-reviews').innerHTML = reviewsHtml;
+
+      document.querySelectorAll('.tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+          document.querySelectorAll('.tab-pane').forEach(function (p) { p.classList.remove('active'); });
+          btn.classList.add('active');
+          document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+        });
+      });
+
+      // --- Related Products ---
+      var related = [];
+      if (typeof getRelatedProducts === 'function') {
+        related = getRelatedProducts(product, 4);
+      }
+      if (!related || related.length < 4) {
+        var extra = PRODUCTS.filter(function (p) {
+          return p.id !== product.id && (!related || related.indexOf(p) === -1);
+        });
+        extra.sort(function () { return 0.5 - Math.random(); });
+        if (!related) related = [];
+        for (var r = 0; r < extra.length && related.length < 4; r++) {
+          related.push(extra[r]);
+        }
+      }
+
+      var rpContainer = document.getElementById('related-products');
+      related.slice(0, 4).forEach(function (rp) {
+        if (typeof productCard === 'function') {
+          rpContainer.innerHTML += productCard(rp);
+        } else {
+          rpContainer.innerHTML += '<div class="product-card" onclick="location.href=\'product.html?id=' + rp.id + '\'">'
+            + '<div class="card-img"><img src="' + rp.image + '" alt="' + rp.name + '" style="width:100%;height:200px;object-fit:cover;border-radius:12px;"></div>'
+            + '<div class="card-body">'
+            + '<div class="card-cat">' + (rp.subcategory || rp.category) + '</div>'
+            + '<div class="card-title">' + rp.name + '</div>'
+            + '<div class="card-price">' + formatPrice(rp.price) + '<span class="card-old">' + formatPrice(rp.oldPrice) + '</span></div>'
+            + '</div></div>';
+        }
+      });
+
+      // --- Badge Updater ---
+      function updateBadges() {
+        var cart = JSON.parse(localStorage.getItem('toyverse_cart') || '[]');
+        var cartCount = 0;
+        for (var c = 0; c < cart.length; c++) { cartCount += cart[c].qty || 1; }
+        var cartBadge = document.getElementById('cartBadge');
+        if (cartBadge) { cartBadge.textContent = cartCount; cartBadge.style.display = cartCount > 0 ? 'flex' : 'none'; }
+
+        var wl = JSON.parse(localStorage.getItem('toyverse_wishlist') || '[]');
+        var wlBadge = document.getElementById('wishlistBadge');
+        if (wlBadge) { wlBadge.textContent = wl.length; wlBadge.style.display = wl.length > 0 ? 'flex' : 'none'; }
+      }
+      updateBadges();
+
+      // --- Hamburger Menu ---
+      var hamburger = document.querySelector('.hamburger-menu');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      if (hamburger && overlay) {
+        hamburger.addEventListener('click', function () { overlay.classList.add('open'); });
+      }
+      if (closeBtn && overlay) {
+        closeBtn.addEventListener('click', function () { overlay.classList.remove('open'); });
+      }
+
+      // --- Back to Top ---
+      var backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) { backToTop.classList.add('visible'); }
+        else { backToTop.classList.remove('visible'); }
+      });
+      if (backToTop) {
+        backToTop.addEventListener('click', function () { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+      }
+
+      // --- Newsletter ---
+      var form = document.getElementById('newsletterForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          showToast('Thank you for subscribing to ToyVerse!', 'success');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

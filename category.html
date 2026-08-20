@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToyVerse - Category</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free delivery on orders over Rs 5,000! Use code <strong>TOYVERSE10</strong> for 10% off</p>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">🧸 ToyVerse</a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="category.html?cat=girls">Girls</a>
+        <a href="category.html?cat=boys">Boys</a>
+        <a href="category.html?cat=premium">Premium</a>
+        <a href="category.html?cat=imported">Imported</a>
+        <a href="category.html?cat=educational">Educational</a>
+        <a href="category.html?cat=new">New Arrivals</a>
+        <a href="category.html?cat=bestsellers">Best Sellers</a>
+        <a href="category.html?cat=sale">Sale</a>
+      </nav>
+      <div class="navbar-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search toys..." class="search-input">
+          <button class="search-btn">&#128269;</button>
+        </div>
+        <a href="#" class="icon-link wishlist-icon">
+          &#9825;
+          <span class="badge">3</span>
+        </a>
+        <a href="#" class="icon-link cart-icon">
+          &#128722;
+          <span class="badge">2</span>
+        </a>
+        <button class="hamburger-menu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+      <a href="index.html">Home</a>
+      <a href="category.html?cat=girls">Girls</a>
+      <a href="category.html?cat=boys">Boys</a>
+      <a href="category.html?cat=premium">Premium</a>
+      <a href="category.html?cat=imported">Imported</a>
+      <a href="category.html?cat=educational">Educational</a>
+      <a href="category.html?cat=new">New Arrivals</a>
+      <a href="category.html?cat=bestsellers">Best Sellers</a>
+      <a href="category.html?cat=sale">Sale</a>
+    </div>
+  </div>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 id="pageTitle">All Products</h1>
+      <nav class="breadcrumbs" id="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span id="breadcrumbCurrent">All Products</span>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Filter & Sort Bar -->
+  <section class="filter-bar">
+    <div class="container">
+      <div class="filter-buttons" id="filterButtons">
+        <button class="filter-btn active" data-cat="all">All</button>
+        <button class="filter-btn" data-cat="girls">Girls</button>
+        <button class="filter-btn" data-cat="boys">Boys</button>
+        <button class="filter-btn" data-cat="premium">Premium</button>
+        <button class="filter-btn" data-cat="imported">Imported</button>
+        <button class="filter-btn" data-cat="educational">Educational</button>
+      </div>
+      <div class="filter-actions">
+        <span class="product-count" id="productCount">0 products</span>
+        <select class="sort-select" id="sortSelect">
+          <option value="featured">Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="newest">Newest</option>
+          <option value="top-rated">Top Rated</option>
+        </select>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products Grid -->
+  <section class="category-products">
+    <div class="container">
+      <div class="products-grid" id="categoryProducts"></div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">🧸 ToyVerse</a>
+          <p>Your trusted destination for premium, educational, and fun toys. Inspiring imagination and learning through play since 2020.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="category.html?cat=girls">Girls Toys</a></li>
+            <li><a href="category.html?cat=boys">Boys Toys</a></li>
+            <li><a href="category.html?cat=premium">Premium Collection</a></li>
+            <li><a href="category.html?cat=imported">Imported Toys</a></li>
+            <li><a href="category.html?cat=new">New Arrivals</a></li>
+            <li><a href="category.html?cat=sale">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return &amp; Refund Policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ToyVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var ITEMS_PER_PAGE = 24;
+      var params = new URLSearchParams(window.location.search);
+      var catParam = params.get('cat') || 'all';
+      var currentFilter = catParam;
+      var currentPage = 1;
+      var currentSort = 'featured';
+
+      var titles = {
+        girls: 'Girls Toys',
+        boys: 'Boys Toys',
+        premium: 'Premium Collection',
+        imported: 'Imported Toys',
+        educational: 'Educational Toys',
+        new: 'New Arrivals',
+        bestsellers: 'Best Sellers',
+        sale: 'Special Offers',
+        all: 'All Products'
+      };
+
+      var displayTitle = titles[catParam] || titles.all;
+      document.getElementById('pageTitle').textContent = displayTitle;
+      document.getElementById('breadcrumbCurrent').textContent = displayTitle;
+      document.title = 'ToyVerse - ' + displayTitle;
+
+      var filterButtons = document.querySelectorAll('.filter-btn');
+      filterButtons.forEach(function (btn) {
+        var btnCat = btn.getAttribute('data-cat');
+        if (btnCat === currentFilter) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+        btn.addEventListener('click', function () {
+          currentFilter = this.getAttribute('data-cat');
+          currentPage = 1;
+          filterButtons.forEach(function (b) { b.classList.remove('active'); });
+          this.classList.add('active');
+          var newTitle = titles[currentFilter] || titles.all;
+          document.getElementById('pageTitle').textContent = newTitle;
+          document.getElementById('breadcrumbCurrent').textContent = newTitle;
+          renderProducts();
+        });
+      });
+
+      var sortSelect = document.getElementById('sortSelect');
+      sortSelect.addEventListener('change', function () {
+        currentSort = this.value;
+        currentPage = 1;
+        renderProducts();
+      });
+
+      function getFilteredProducts() {
+        if (typeof PRODUCTS === 'undefined') return [];
+        var filtered;
+        if (currentFilter === 'all') {
+          filtered = PRODUCTS.slice();
+        } else if (currentFilter === 'bestsellers') {
+          filtered = PRODUCTS.filter(function (p) { return p.bestseller; });
+        } else if (currentFilter === 'new') {
+          filtered = PRODUCTS.filter(function (p) { return p.isNew; });
+        } else if (currentFilter === 'sale') {
+          filtered = PRODUCTS.filter(function (p) { return p.onSale; });
+        } else {
+          filtered = PRODUCTS.filter(function (p) { return p.category === currentFilter; });
+        }
+
+        switch (currentSort) {
+          case 'price-low':
+            filtered.sort(function (a, b) { return a.price - b.price; });
+            break;
+          case 'price-high':
+            filtered.sort(function (a, b) { return b.price - a.price; });
+            break;
+          case 'newest':
+            filtered.sort(function (a, b) { return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0); });
+            break;
+          case 'top-rated':
+            filtered.sort(function (a, b) { return (b.rating || 0) - (a.rating || 0); });
+            break;
+          default:
+            break;
+        }
+        return filtered;
+      }
+
+      function renderProducts() {
+        var products = getFilteredProducts();
+        var totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
+        if (currentPage > totalPages) currentPage = 1;
+        var start = (currentPage - 1) * ITEMS_PER_PAGE;
+        var pageProducts = products.slice(start, start + ITEMS_PER_PAGE);
+
+        document.getElementById('productCount').textContent = products.length + ' products';
+
+        var grid = document.getElementById('categoryProducts');
+        grid.innerHTML = '';
+        pageProducts.forEach(function (p) {
+          grid.innerHTML += productCard(p);
+        });
+
+        renderPagination(totalPages);
+      }
+
+      function renderPagination(totalPages) {
+        var container = document.getElementById('pagination');
+        container.innerHTML = '';
+        if (totalPages <= 1) return;
+
+        if (currentPage > 1) {
+          var prev = document.createElement('button');
+          prev.textContent = 'Previous';
+          prev.className = 'pagination-btn';
+          prev.addEventListener('click', function () {
+            currentPage--;
+            renderProducts();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+          container.appendChild(prev);
+        }
+
+        for (var i = 1; i <= totalPages; i++) {
+          var pageBtn = document.createElement('button');
+          pageBtn.textContent = i;
+          pageBtn.className = 'pagination-btn' + (i === currentPage ? ' active' : '');
+          (function (page) {
+            pageBtn.addEventListener('click', function () {
+              currentPage = page;
+              renderProducts();
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+          })(i);
+          container.appendChild(pageBtn);
+        }
+
+        if (currentPage < totalPages) {
+          var next = document.createElement('button');
+          next.textContent = 'Next';
+          next.className = 'pagination-btn';
+          next.addEventListener('click', function () {
+            currentPage++;
+            renderProducts();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+          container.appendChild(next);
+        }
+      }
+
+      // Hamburger menu
+      var hamburger = document.querySelector('.hamburger-menu');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      if (hamburger && overlay) {
+        hamburger.addEventListener('click', function () { overlay.classList.add('open'); });
+      }
+      if (closeBtn && overlay) {
+        closeBtn.addEventListener('click', function () { overlay.classList.remove('open'); });
+      }
+
+      // Back to top
+      var backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      if (backToTop) {
+        backToTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      renderProducts();
+    });
+  </script>
+</body>
+</html>

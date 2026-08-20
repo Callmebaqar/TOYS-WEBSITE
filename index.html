@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToyVerse - Play. Learn. Imagine.</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <p>Free delivery on orders over Rs 5,000! Use code <strong>TOYVERSE10</strong> for 10% off</p>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">🧸 ToyVerse</a>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="category.html?cat=girls">Girls</a>
+        <a href="category.html?cat=boys">Boys</a>
+        <a href="category.html?cat=premium">Premium</a>
+        <a href="category.html?cat=imported">Imported</a>
+        <a href="category.html?cat=educational">Educational</a>
+        <a href="category.html?cat=new">New Arrivals</a>
+        <a href="category.html?cat=bestsellers">Best Sellers</a>
+        <a href="category.html?cat=sale">Sale</a>
+      </nav>
+      <div class="navbar-actions">
+        <div class="search-bar">
+          <input type="text" placeholder="Search toys..." class="search-input">
+          <button class="search-btn">&#128269;</button>
+        </div>
+        <a href="#" class="icon-link wishlist-icon">
+          &#9825;
+          <span class="badge">3</span>
+        </a>
+        <a href="#" class="icon-link cart-icon">
+          &#128722;
+          <span class="badge">2</span>
+        </a>
+        <button class="hamburger-menu" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay">
+    <div class="mobile-menu">
+      <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+      <a href="index.html" class="active">Home</a>
+      <a href="category.html?cat=girls">Girls</a>
+      <a href="category.html?cat=boys">Boys</a>
+      <a href="category.html?cat=premium">Premium</a>
+      <a href="category.html?cat=imported">Imported</a>
+      <a href="category.html?cat=educational">Educational</a>
+      <a href="category.html?cat=new">New Arrivals</a>
+      <a href="category.html?cat=bestsellers">Best Sellers</a>
+      <a href="category.html?cat=sale">Sale</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Play. Learn. Imagine.</h1>
+      <p>Discover a world of wonder with our curated collection of premium toys, educational games, and creative playsets for kids of all ages.</p>
+      <div class="hero-buttons">
+        <a href="category.html?cat=all" class="btn btn-primary">Shop Now</a>
+        <a href="category.html?cat=premium" class="btn btn-secondary">Explore Premium Toys</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">1000+</span>
+          <span class="stat-label">Products</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">50K+</span>
+          <span class="stat-label">Happy Parents</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">4.9</span>
+          <span class="stat-label">Rating</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Grid -->
+  <section class="categories-section">
+    <div class="container">
+      <h2 class="section-title">Shop by Category</h2>
+      <div class="categories-grid">
+        <a href="category.html?cat=girls&sub=dolls" class="category-card">
+          <div class="category-icon">🎀</div>
+          <h3>Dolls</h3>
+        </a>
+        <a href="category.html?cat=girls&sub=dollhouses" class="category-card">
+          <div class="category-icon">🏡</div>
+          <h3>Doll Houses</h3>
+        </a>
+        <a href="category.html?cat=boys&sub=rc" class="category-card">
+          <div class="category-icon">🏎️</div>
+          <h3>RC Cars</h3>
+        </a>
+        <a href="category.html?cat=boys&sub=building" class="category-card">
+          <div class="category-icon">🧱</div>
+          <h3>Building Sets</h3>
+        </a>
+        <a href="category.html?cat=educational&sub=stem" class="category-card">
+          <div class="category-icon">🔬</div>
+          <h3>STEM Toys</h3>
+        </a>
+        <a href="category.html?cat=girls&sub=soft" class="category-card">
+          <div class="category-icon">🧸</div>
+          <h3>Soft Toys</h3>
+        </a>
+        <a href="category.html?cat=boys&sub=outdoor" class="category-card">
+          <div class="category-icon">⚽</div>
+          <h3>Outdoor</h3>
+        </a>
+        <a href="category.html?cat=educational&sub=arts" class="category-card">
+          <div class="category-icon">🎨</div>
+          <h3>Arts &amp; Crafts</h3>
+        </a>
+        <a href="category.html?cat=educational&sub=puzzles" class="category-card">
+          <div class="category-icon">🧩</div>
+          <h3>Puzzles</h3>
+        </a>
+        <a href="category.html?cat=boys&sub=action" class="category-card">
+          <div class="category-icon">🦸</div>
+          <h3>Action Figures</h3>
+        </a>
+        <a href="category.html?cat=girls&sub=roleplay" class="category-card">
+          <div class="category-icon">👩‍⚕️</div>
+          <h3>Role Play</h3>
+        </a>
+        <a href="category.html?cat=premium&sub=giftsets" class="category-card">
+          <div class="category-icon">🎁</div>
+          <h3>Gift Sets</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Girls Toys -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Girls Toys</h2>
+        <a href="category.html?cat=girls" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="girlsToys"></div>
+    </div>
+  </section>
+
+  <!-- Boys Toys -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Boys Toys</h2>
+        <a href="category.html?cat=boys" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="boysToys"></div>
+    </div>
+  </section>
+
+  <!-- Premium Collection -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Premium Collection</h2>
+        <a href="category.html?cat=premium" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="premiumToys"></div>
+    </div>
+  </section>
+
+  <!-- Imported Toys -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Imported Toys</h2>
+        <a href="category.html?cat=imported" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="importedToys"></div>
+    </div>
+  </section>
+
+  <!-- Educational Toys -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Educational Toys</h2>
+        <a href="category.html?cat=educational" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="educationalToys"></div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Best Sellers</h2>
+        <a href="category.html?cat=bestsellers" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="bestSellers"></div>
+    </div>
+  </section>
+
+  <!-- New Arrivals -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">New Arrivals</h2>
+        <a href="category.html?cat=new" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="newArrivals"></div>
+    </div>
+  </section>
+
+  <!-- Special Offers -->
+  <section class="product-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Special Offers</h2>
+        <a href="category.html?cat=sale" class="view-all">View All &rarr;</a>
+      </div>
+      <div class="products-grid" id="specialOffers"></div>
+    </div>
+  </section>
+
+  <!-- Promo Banner -->
+  <section class="promo-banner">
+    <div class="container">
+      <div class="promo-content">
+        <h2>Premium Gift Sets Starting from Rs 8,999</h2>
+        <p>Make every occasion special with our beautifully curated gift sets for children of all ages.</p>
+        <a href="category.html?cat=premium&sub=giftsets" class="btn btn-primary">Shop Gift Sets</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Section -->
+  <section class="trust-section">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">✅</div>
+          <h3>Quality Products</h3>
+          <p>Every toy meets international safety standards</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔒</div>
+          <h3>Secure Checkout</h3>
+          <p>100% secure payment processing</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🚚</div>
+          <h3>Fast Delivery</h3>
+          <p>Free delivery on orders over Rs 5,000</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🔄</div>
+          <h3>Easy Returns</h3>
+          <p>7-day hassle-free return policy</p>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">💬</div>
+          <h3>Customer Support</h3>
+          <p>Dedicated support team available 7 days a week</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section class="newsletter-section">
+    <div class="container">
+      <h2 class="section-title">Stay in the Loop</h2>
+      <p>Subscribe for exclusive deals, new arrivals, and playtime inspiration.</p>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" placeholder="Enter your email address" required>
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo">🧸 ToyVerse</a>
+          <p>Your trusted destination for premium, educational, and fun toys. Inspiring imagination and learning through play since 2020.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook">FB</a>
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="Twitter">TW</a>
+            <a href="#" aria-label="YouTube">YT</a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="category.html?cat=girls">Girls Toys</a></li>
+            <li><a href="category.html?cat=boys">Boys Toys</a></li>
+            <li><a href="category.html?cat=premium">Premium Collection</a></li>
+            <li><a href="category.html?cat=imported">Imported Toys</a></li>
+            <li><a href="category.html?cat=new">New Arrivals</a></li>
+            <li><a href="category.html?cat=sale">Sale</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Customer Service</h4>
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Return &amp; Refund Policy</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Size Guide</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 ToyVerse. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <script src="js/app.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var sections = [
+        { id: 'girlsToys', categories: ['girls'] },
+        { id: 'boysToys', categories: ['boys'] },
+        { id: 'premiumToys', categories: ['premium'] },
+        { id: 'importedToys', categories: ['imported'] },
+        { id: 'educationalToys', categories: ['educational'] },
+        { id: 'bestSellers', categories: ['bestsellers'] },
+        { id: 'newArrivals', categories: ['new'] },
+        { id: 'specialOffers', categories: ['sale'] }
+      ];
+
+      sections.forEach(function (section) {
+        var container = document.getElementById(section.id);
+        if (!container || typeof PRODUCTS === 'undefined') return;
+        var filtered = PRODUCTS.filter(function (p) {
+          if (section.categories[0] === 'bestsellers') return p.bestseller;
+          if (section.categories[0] === 'new') return p.isNew;
+          if (section.categories[0] === 'sale') return p.onSale;
+          return p.category === section.categories[0];
+        });
+        var shown = filtered.slice(0, 4);
+        shown.forEach(function (p) {
+          container.innerHTML += productCard(p);
+        });
+      });
+
+      // Hamburger menu
+      var hamburger = document.querySelector('.hamburger-menu');
+      var overlay = document.getElementById('mobileMenuOverlay');
+      var closeBtn = document.getElementById('mobileMenuClose');
+      if (hamburger && overlay) {
+        hamburger.addEventListener('click', function () { overlay.classList.add('open'); });
+      }
+      if (closeBtn && overlay) {
+        closeBtn.addEventListener('click', function () { overlay.classList.remove('open'); });
+      }
+
+      // Back to top
+      var backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 400) {
+          backToTop.classList.add('visible');
+        } else {
+          backToTop.classList.remove('visible');
+        }
+      });
+      if (backToTop) {
+        backToTop.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // Newsletter
+      var form = document.getElementById('newsletterForm');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Thank you for subscribing to ToyVerse!');
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+</html>

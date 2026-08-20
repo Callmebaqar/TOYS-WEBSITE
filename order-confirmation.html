@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmed! - ToyVerse</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🎉 Free delivery on orders over Rs 5,000! Use code <strong>TOYVERSE10</strong> for 10% off
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🧸 ToyVerse</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#girls">Girls</a></li>
+                <li><a href="index.html#boys">Boys</a></li>
+                <li><a href="index.html#premium">Premium</a></li>
+                <li><a href="index.html#imported">Imported</a></li>
+                <li><a href="index.html#educational">Educational</a></li>
+                <li><a href="index.html#new-arrivals">New Arrivals</a></li>
+                <li><a href="index.html#best-sellers">Best Sellers</a></li>
+                <li><a href="index.html#sale" class="sale-link">Sale</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search toys..." id="searchInput">
+                    <button type="button">🔍</button>
+                </div>
+                <a href="wishlist.html" class="nav-icon" id="wishlistIcon">
+                    ♡
+                    <span class="wish-count">0</span>
+                </a>
+                <a href="cart.html" class="nav-icon" id="cartIcon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#girls">Girls</a></li>
+            <li><a href="index.html#boys">Boys</a></li>
+            <li><a href="index.html#premium">Premium</a></li>
+            <li><a href="index.html#imported">Imported</a></li>
+            <li><a href="index.html#educational">Educational</a></li>
+            <li><a href="index.html#new-arrivals">New Arrivals</a></li>
+            <li><a href="index.html#best-sellers">Best Sellers</a></li>
+            <li><a href="index.html#sale">Sale</a></li>
+        </ul>
+    </div>
+
+    <!-- Order Confirmation Content -->
+    <section class="order-confirmation-section">
+        <div class="container">
+            <!-- Animated Checkmark -->
+            <div class="success-checkmark">
+                <div class="checkmark-circle">
+                    <svg class="checkmark-svg" viewBox="0 0 52 52">
+                        <circle class="checkmark-circle-path" cx="26" cy="26" r="25" fill="none"/>
+                        <path class="checkmark-check-path" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+                    </svg>
+                </div>
+            </div>
+
+            <h1 class="confirmation-heading">Order Confirmed!</h1>
+            <p class="confirmation-subtext">Thank you for shopping with ToyVerse. Your order has been placed successfully!</p>
+
+            <!-- Order ID -->
+            <div class="order-id-display">
+                <span class="order-id-label">Order ID</span>
+                <span class="order-id-value" id="orderId">TV-XXXXX</span>
+            </div>
+
+            <!-- Order Details Box -->
+            <div class="order-details-box">
+                <h2>Order Details</h2>
+                <div class="order-details-grid">
+                    <div class="order-detail-item">
+                        <span class="detail-label">Status</span>
+                        <span class="detail-value status-confirmed">✅ Confirmed</span>
+                    </div>
+                    <div class="order-detail-item">
+                        <span class="detail-label">Payment Method</span>
+                        <span class="detail-value">💵 Cash on Delivery (COD)</span>
+                    </div>
+                    <div class="order-detail-item">
+                        <span class="detail-label">Estimated Delivery</span>
+                        <span class="detail-value">🚚 5-7 Business Days</span>
+                    </div>
+                    <div class="order-detail-item">
+                        <span class="detail-label">Shipping Address</span>
+                        <span class="detail-value" id="shippingAddress">123 Toy Street, Lahore, Pakistan</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue Shopping Button -->
+            <div class="confirmation-actions">
+                <a href="index.html" class="btn btn-primary btn-large">Continue Shopping</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🧸 ToyVerse</h3>
+                    <p>Your trusted online toy store in Pakistan. Quality toys for every child's imagination.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#best-sellers">Best Sellers</a></li>
+                        <li><a href="index.html#new-arrivals">New Arrivals</a></li>
+                        <li><a href="index.html#sale">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>123 Toy Street, Lahore</p>
+                    <p>+92 300 1234567</p>
+                    <p>hello@toyverse.pk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ToyVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var orderId = 'TV-' + Math.floor(10000 + Math.random() * 90000);
+            document.getElementById('orderId').textContent = orderId;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ToyVerse</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        🎉 Free delivery on orders over Rs 5,000! Use code <strong>TOYVERSE10</strong> for 10% off
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">🧸 ToyVerse</a>
+
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#girls">Girls</a></li>
+                <li><a href="index.html#boys">Boys</a></li>
+                <li><a href="index.html#premium">Premium</a></li>
+                <li><a href="index.html#imported">Imported</a></li>
+                <li><a href="index.html#educational">Educational</a></li>
+                <li><a href="index.html#new-arrivals">New Arrivals</a></li>
+                <li><a href="index.html#best-sellers">Best Sellers</a></li>
+                <li><a href="index.html#sale" class="sale-link">Sale</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="search-bar">
+                    <input type="text" placeholder="Search toys..." id="searchInput">
+                    <button type="button">🔍</button>
+                </div>
+                <a href="wishlist.html" class="nav-icon" id="wishlistIcon">
+                    ♡
+                    <span class="wish-count">0</span>
+                </a>
+                <a href="cart.html" class="nav-icon" id="cartIcon">
+                    🛒
+                    <span class="cart-count">0</span>
+                </a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#girls">Girls</a></li>
+            <li><a href="index.html#boys">Boys</a></li>
+            <li><a href="index.html#premium">Premium</a></li>
+            <li><a href="index.html#imported">Imported</a></li>
+            <li><a href="index.html#educational">Educational</a></li>
+            <li><a href="index.html#new-arrivals">New Arrivals</a></li>
+            <li><a href="index.html#best-sellers">Best Sellers</a></li>
+            <li><a href="index.html#sale">Sale</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Get in touch with our team.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2>Send Us a Message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="contactName">Your Name *</label>
+                            <input type="text" id="contactName" name="name" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactEmail">Email Address *</label>
+                            <input type="email" id="contactEmail" name="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactPhone">Phone Number</label>
+                            <input type="tel" id="contactPhone" name="phone" placeholder="Enter your phone number">
+                        </div>
+                        <div class="form-group">
+                            <label for="contactSubject">Subject *</label>
+                            <select id="contactSubject" name="subject" required>
+                                <option value="" disabled selected>Select a subject</option>
+                                <option value="order-inquiry">Order Inquiry</option>
+                                <option value="product-question">Product Question</option>
+                                <option value="shipping">Shipping & Delivery</option>
+                                <option value="returns">Returns & Exchanges</option>
+                                <option value="complaint">Complaint</option>
+                                <option value="partnership">Business Partnership</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMessage">Message *</label>
+                            <textarea id="contactMessage" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <h2>Get in Touch</h2>
+                    <div class="contact-info-cards">
+                        <div class="contact-info-card">
+                            <div class="info-icon">📍</div>
+                            <h3>Address</h3>
+                            <p>123 Toy Street<br>Lahore, Pakistan</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="info-icon">📞</div>
+                            <h3>Phone</h3>
+                            <p>+92 300 1234567</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="info-icon">✉️</div>
+                            <h3>Email</h3>
+                            <p>hello@toyverse.pk</p>
+                        </div>
+                        <div class="contact-info-card">
+                            <div class="info-icon">🕐</div>
+                            <h3>Business Hours</h3>
+                            <p>Monday - Saturday<br>9:00 AM - 9:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h3>Follow Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" aria-label="Facebook">📘</a>
+                            <a href="#" class="social-icon" aria-label="Instagram">📷</a>
+                            <a href="#" class="social-icon" aria-label="Twitter">🐦</a>
+                            <a href="#" class="social-icon" aria-label="WhatsApp">💬</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+                <details class="faq-item">
+                    <summary>How long does delivery take?</summary>
+                    <div class="faq-answer">
+                        <p>We offer standard delivery within 5-7 business days across Pakistan. For orders placed in Lahore, delivery may arrive within 2-3 business days. Express delivery options are also available at checkout for an additional fee.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>What is your return policy?</summary>
+                    <div class="faq-answer">
+                        <p>We accept returns within 7 days of delivery for unused, unopened items in their original packaging. To initiate a return, please contact our support team with your order number. Refunds are processed within 5-7 business days after we receive the returned item. Please note that opened or used items cannot be returned for hygiene reasons.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>Are your toys safe for children?</summary>
+                    <div class="faq-answer">
+                        <p>Absolutely! Safety is our top priority. All toys sold on ToyVerse are sourced from trusted manufacturers and meet international safety standards. Our toys are tested for harmful substances, sharp edges, and small parts. We only stock age-appropriate products with clear age recommendations on every listing.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>How can I track my order?</summary>
+                    <div class="faq-answer">
+                        <p>Once your order is dispatched, you will receive an SMS and email with your tracking number. You can use this tracking number on our website or the courier partner's site to track your package in real-time. You can also log in to your ToyVerse account to view all your order details and tracking information.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter-section">
+        <div class="container">
+            <h2>Stay in the Loop</h2>
+            <p>Subscribe for exclusive deals, new arrivals, and toy inspiration!</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>🧸 ToyVerse</h3>
+                    <p>Your trusted online toy store in Pakistan. Quality toys for every child's imagination.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#best-sellers">Best Sellers</a></li>
+                        <li><a href="index.html#new-arrivals">New Arrivals</a></li>
+                        <li><a href="index.html#sale">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Help</h4>
+                    <ul>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="wishlist.html">Wishlist</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <p>123 Toy Street, Lahore</p>
+                    <p>+92 300 1234567</p>
+                    <p>hello@toyverse.pk</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ToyVerse. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
